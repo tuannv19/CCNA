@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var touching = null;
+        $('selector').each(function () {
+            this.addEventListener("touchstart", function (e) {
+                e.preventDefault();
+                touching = window.setTimeout(longTouch, 500, true);
+            }, false);
+            this.addEventListener("touchend", function (e) {
+                e.preventDefault();
+                window.clearTimeout(touching);
+            }, false);
+        });
+
+        function longTouch(e) {
+            // do something!
+        }
+    </script>
+</head>
+<body>
+    <div style="height:3px"></div>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Giới thiệu</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Trong phần này chỉ nói đến 1 số loại máy ảnh DSLR thông dụng và thường dùng nhất của anh em, các nút cơ bản trên máy ảnh, cách chụp và setup máy để anh em có thể tùy chỉnh thiết bị của mình.<br /><br />
+                        DSLR là viết tắt của Digital Single Lens Reflex: Máy sử dụng cơ chế hoạt động phản xạ ống kính đơn (SLR) và sử dụng cảm biến kỹ thuật số thay cho phim.<br /><br />
+                        Hiện nay có rất nhiều hãng sản xuất các dòng máy DSLR, nhưng phổ biến và sử dụng nhiều nhất hiện nay là: Canon, Nikon, Sony, Pentax. Đây là 4 nhà sản xuất máy ảnh DSLR có số lượng máy lớn nhất hiện nay tại Việt Nam. Trong đó Canon và Nikon hoàn toàn áp đảo về số lượng do có nhiều dòng máy đáp ứng đại đa số nhu cầu người dùng. Sony và Pentax thì ít hơn do giá cả cao và ít dòng DSLR thông dụng.<br /><br />
+                        Các bạn nên phân biệt rõ DSLR và Mirrorless (Máy ảnh không gương lật). Cũng vì lí do này mà mình không đưa hãng Fujifilm vào. Mục đích ở đây chỉ muốn giới thiệu về 2 hãng Canon và Nikon đang rất phổ biến tại Việt Nam. Còn các hãng khác mình sẽ cập nhật ứng dụng sau.<br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Canon</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Ở máy ảnh Canon hiện nay tại Việt Nam phổ biến chia làm 3 dòng:<br /><br />
+                        1. Dòng dành cho những người mới chơi (Entry Level) bao gồm các dòng máy có 3 và 4 chữ số trước chữ D. Ví dụ 1100D, 400D… gọi chung là xxxxD hay xxxD. Đây là các dòng máy nhỏ, phục vụ cho mục đích du lịch, vui chơi, chụp cho vui, nhưng vẫn mang trong mình sức mạnh của các dòng máy DSLR không khác chuyên nghiệp là mấy. Đây là dòng máy sử dụng cảm biến APS-C có hệ số Crop 1,6x.<br />
+                        2. Dòng dành cho những người đã biết chơi ảnh được gọi là bán chuyên nghiệp (Semi-Professional). Dòng này bao gồm các loại máy có 2 chữ số trước chữ D. Ví dụ: 30D, 40D… gọi chung là xxD. Và trong dòng này có 2 dòng đặc biệt có tên gồm 1 chữ số khác với chuẩn chung là 7D và 6D. Hiện nay 7D đã có Mark 2, và xxD cao nhất hiện tại là 80D. Đây là dòng máy sử dụng cảm biến APS-C có hệ số Crop 1,6x, riêng dòng 6D sử dụng cảm biến Full frame.<br />
+                        3. Dòng dành cho những tay máy chuyên nghiệp (Professional). Dòng này bao gồm các dòng máy có 1 chữ số trước chữ D gọi chung là xD. Ví dụ: 5D, 1D. Hiện nay phiên bản mới nhất của dòng này là 5D Mark 4. Trong đó riêng dòng 1D được phân chia ra làm 4 dòng riêng phục vụ cho mục đích riêng của người chơi là 1D, 1Ds, 1Dx, và 1Dc (Đây là dòng chuyên cho quay phim). Riêng dòng 5D thì được chia ra làm 3 là: 5D, 5Ds, 5DsR. Đây là dòng máy sử dụng cảm biến Full frame. Riêng dòng 1D sử dụng cảm biến APS-H với hệ số Crop là 1,3x.<br />
+                        <b><i>* Lưu ý:</i></b> Ở Canon sử dụng chữ La Mã và chữ Mark để biểu hiện cho đời máy. Chữ Mark I, II, III, IV,… càng lớn thì dòng máy càng mới. Riêng dòng Semi-Pro thì đời máy càng lớn thì số càng cao, mới nhất hiện nay là 80D.<br />
+                        Cấu trúc của các dòng máy Canon thường giống nhau, thông thường dòng máy càng cao càng chuyên nghiệp thì nút chức năng sẽ nhiều hơn, cảm biến sẽ lớn hơn. Tuy nhiên vẫn có 1 số khác biệt, ví dụ như 6D sử dụng cảm biến Full frame hay 1D sử dụng cảm biến APS-H Crop 1,3x.<br />
+                        Bây giờ chúng ta sẽ tìm hiểu các nút chức năng trên 1 DSLR của Canon<br /><br />
+                        <b>Các phím nóng phía trước máy.</b><br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/1.jpg" width="100%" /><br /><br />
+
+                        1. Đèn hồng ngoại:<br />
+                        Chiếc đèn nhỏ này có tác dụng dừng đèn flash và tác động tới võng mạc của chủ thể, trước khi flash đánh, làm giảm thiểu hiệu ứng mắt đỏ khi chụp. Chiếc đèn này còn có tác dụng đếm ngược thời gian khi đặt chế độ chụp hẹn giờ.<br />
+                        2. Vòng lấy nét trên ống kính (Nikon cũng tương tự)<br />
+                        Trong chế độ Auto Focus, vòng này tự động xoay để lấy nét, còn ở chế độ Manual Focus, bạn phải tự xoay vòng này để lấy nét, khá khó khan nếu bạn chưa quen nhưng bạn sẽ có thể lấy nét chính xác vào điểm bạn muốn.<br />
+                        3. Vòng zoom trên ống kính (Nikon cũng tương tự)<br />
+                        Vòng zoom cho phép bạn thay đổi tiêu cự, để phù hợp với từng góc chụp, từng nhu cầu chụp, từ chân dung/ tele hay macro cho tới phong cảnh.<br />
+                        4. Nút flash<br />
+                        Bạn có thể sử dụng để tùy chỉnh sử dụng đèn flash theo nhu cầu của mình.<br />
+                        5. Chuyển chế độ lấy nét trên ống kính Canon<br />
+                        Nút này dùng để chuyển giữa 2 chế độ Manual Focus (MF-Lấy nét tay) và Auto Focus (AF-Lấy nét tự động).<br />
+                        6. Chuyển chế độ Image Stablilize (Chế động chống rung)<br />
+                        IS (Image Stabilizer) đối với ống kính của Canon được thiết kế để ngăn chặn hiện tượng ảnh bị mờ, nhòe do rung ống kính.<br />
+                        * Còn đối với ống kính của Nikon là VR (Vibration Reduction)<br />
+                        7.Built-in microphone (Micro tích hợp dành cho quay phim)<br />
+                        Hầu hết các máy ảnh hiện nay đều được tích hợp khả năng quay video, âm thanh được ghi lại thông qua một microphone được tích hợp sẵn trên body.<br />
+                        8. Độ sâu trường ảnh (Nút DOF)<br />
+                        Khi nhấn vào nút này, hình ảnh sẽ được tạm thời ghi lại, bạn có thể điều chỉnh các thông số, và ngay lập tức các thông số này sẽ tác động lên ảnh, bạn có thể chọn cho mình thông số phù hợp nhất cho từng bức ảnh. Thông thường thì nút này ít thấy có tác dụng)<br /><br />
+
+                        <b>Các phím nóng phía sau máy</b><br /><br />
+                        
+                        <img src="images/cacloaimayanhdslrthongdung/2.jpg" width="100%" /><br /><br />
+
+                        1.Bù sáng<br />
+                        Khi bạn chụp ảnh ở chế độ M (Manual) phím xoay này có tác dụng bù sáng để phù hợp với từng điều kiện sáng khác nhau, trong một số chế độ chụp khác, nó có tác dụng khác như chỉnh độ mở ống kính …<br />
+                        2.Chọn điểm lấy nét<br />
+                        Đúng như tên gọi, nó cho phép bạn lấy nét vào điểm mà bạn muốn, trong khung hình và trong giới hạn cho phép của máy.<br /><br />
+
+                        <b>Trên các dòng máy cao cấp, chỗ này có 1 nút nữa là nút AF-ON như hình:</b><br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/3.jpg" width="100%" /><br /><br />
+
+                        <b><i>Cách sử dụng là bấm giữ nút này để lấy nét, giống như khi bạn bấm ½ nút cò chụp. Thao tác này sẽ nhanh hơn và sử dụng để giữ nét đến đối tượng khi bạn chụp liên tục trong 1 môi trường và khoảng cách đến đối tượng là không thay đổi, bạn chỉ việc giữ nút này liên tục và bấm nút cò chụp)</i></b><br /><br />
+                        
+                        3. Khóa AE (Khóa sáng)<br />
+                        Nút này cho phép bạn khóa phơi sáng của máy khi máy đã hiển thị đầy đủ thông số về ánh sáng của bức ảnh.<br />
+                        4. LiveView/Quay phim/Format thẻ nhớ<br />
+                        Tính năng có lẽ đã quá quen thuộc, hỗ trợ mọi thao tác như viewfinder trên màn hình của máy. Nút này còn có thể dùng để quay phim hoặc format thẻ nhớ<br />
+                        5. Phím di chuyển<br />
+                        Phím này có tác dụng giúp bạn di chuyển trong menu, hay chuyển đổi qua ảnh khác trong chế độ xem ảnh. Hay tùy chỉnh các thông số bạn đang lựa chọn…<br /><br />
+                        <b><i>* Lưu ý:</i></b> Trên các dòng máy đời cao thì nút này là 1 bánh xe xoay tròn và có nút Set ở giữa để chọn thiết lập.<br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/4.jpg" width="50%" /><br /><br />
+
+                        6. Self-time<br />
+                        Nút này cho phép bạn thay đổi chế độ chụp đơn, hay chụp liên tục, hoặc chế độ hẹn giờ chụp.<br />
+                        7. Playback<br />
+                        Giúp bạn xem lại các hình đã chụp<br />
+                        8. Earase<br />
+                        Đơn giản như biểu tượng, xóa đi các tấm ảnh bạn không hài lòng.<br />
+                        9. Phím Menu<br />
+                        Mọi cài đặt của máy nằm sau phím bấm này.<br /><br />
+                        
+                        <b>Trên đỉnh máy</b><br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/5.jpg" width="100%" /><br /><br />
+
+                        1.Đèn flash<br />
+                        Thường được gọi với cái tên “flash cóc” đây là công cụ hỗ trợ chụp ảnh khi ánh sáng không đủ, tuy nhiên với người dùng chuyên nghiệp, “flash cóc” được coi chỉ để “chống mù”<br />
+                        2. Nút chụp  hay cò chụp:<br />
+                        Với nguyên tắc hoạt động, khi bấm ½ nút máy sẽ bắt đầu lấy nét, ½ tiếp theo sẽ chụp.<br />
+                        3. Vòng quay chính<br />
+                        Vòng xoay đảm nhận khá nhiều nhiệm vụ, khi hoạt động độc lập hay kết hợp cùng phím bấm chức năng nào đó. Ví dụ: Điều chỉnh Khẩu độ khi ở chế độ ưu tiên Khẩu độ (Av), hoặc điều chỉnh Tốc độ khi ở chế độ ưu tiên Tốc độ (Tv)<br />
+                        4. Nút ISO<br />
+                        Việc thay đổi ISO sẽ được thay đổi khi bạn bấm nút này, kết hợp với vòng xoay chính hoặc bánh xe (ở dòng máy xxD hoặc xD).<br />
+                        5. Nút nguồn<br />
+                        Bật/Tắt máy là công dụng chính của nút bấm này (ở các dòng xxD và xD thì nút này nằm phía dưới, luôn có chữ ON hoặc OFF hoặc được đánh dấu gạch trắng).<br />
+                        6. Nút chọn chế độ chụp<br />
+                        Vòng xoay để chuyển đổi các chế độ chụp khác nhau như: M, Av, Tv, Auto, P, A, S,…<br />
+                        <b><i>* Lưu ý:</i></b> Ở một số dòng máy như 60D hay 6D… nút này có thêm một nút phía trên, để xoay được cần phải vừa bấm nút vừa xoay (Nếu không bấm nút mà xoay sẽ gãy lẫy phía trong và văng nút ra ngoài).<br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/6.jpg" width="50%" /><br /><br />
+
+                        7. Hot shoe<br />
+                        Kết nối với phụ kiện flash rời.<br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Nikon</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Nikon thì phân ra các dòng máy rất lộn xộn, không theo 1 hướng nào cho các chữ số, việc đặt tên cũng ngược với Canon. Nikon đặt tên máy DSLR của hãng được đánh dấu bằng chữ D đứng phía trước và theo đó là số. Ví dụ: D200, D7000, D600, D800, D3, Df,… Mỗi dòng máy được phân loại theo kiểu khác nhau như sau:<br /><br />
+                        <span style="font-size:11px;">
+                        (A): Chuyên nghiệp, cao cấp – High-end Professional FX<br />
+                        (B): Chuyên nghiệp, trung cấp – High-end Professional DX<br />
+                        (C): Bán chuyên, cao cấp 1 – High-end Prosumer FX<br />
+                        (D): Bán chuyên, cao cấp 2 – High-end Prosumer DX<br />
+                        (E): Bán chuyên, trung cấp – Midrange DX<br />
+                        (F): Nhập môn, cao cấp – Upper Entry DX<br />
+                        (G): Nhập môn, sơ cấp – Entry DX<br /><br />
+                        <span>
+                        <b><i>* Lưu ý:</i></b> DX là dòng sử dụng cảm biến APS-C hệ số Crop 1,5x còn FX là dòng sử dụng cảm biến Full Frame.<br />
+                        Và các dòng máy được liệt kê như bảng sau:<br /><br />
+
+                        <div style="text-align:center;">
+                        <i>
+                        <img src="images/cacloaimayanhdslrthongdung/7.jpg" width="100%" /><br />
+                        (Bảng trên có thể còn 1 số dòng máy còn thiếu)<i>
+                        </div><br />
+                        
+                        Dưới đây là những nút thông dụng trên Nikon D7000 (Các dòng khác của Nikon cũng sử dụng các nút và biểu tượng giống vậy, có thể 1 số vị trí khác hoặc những dòng cao cấp sẽ có 1 số phím mở rộng) Các nút trên Nikon cũng có tác dụng tương tự như ở Canon, tuy nhiên cũng có 1 số nút có tác dụng khác mà hãng quy định.<br /><br />
+                        Mặt trên:<br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/8.jpg" width="100%" /><br />
+                        <div style="text-align:center;"><i>(Bảng trên có thể còn 1 số dòng máy còn thiếu)</i></div><br /><br />
+
+                        Vòng chọn cách chụp ảnh được mô tả như sau:<br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/9.jpg" width="100%" /><br /><br />
+
+                        Mặt trước:<br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/10.jpg" width="100%" /><br /><br />
+
+                        Bên trái và bên phải:<br /><br />
+
+                        <img src="images/cacloaimayanhdslrthongdung/11.jpg" width="100%" /><br /><br />
+                        
+                        Mặt lưng:<br /><br />
+                        
+                        <img src="images/cacloaimayanhdslrthongdung/12.jpg" width="100%" /><br /><br />
+                        
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:5px;"></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Kết luận</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Cho dù là hãng nào chăng nữa, các nút và các thao tác cũng phải tuân theo một quy luật nhất định để phục vụ người dùng tốt nhất. Các nút bấm và bánh xe điều khiển của tất cả các máy của các hãng đều được bố trí thuận tiện nhất cho người dùng. Hi vọng những thông tin trên tạm thời đáp ứng được nhu cầu của các bạn, giúp các bạn hiểu được chức năng và các ký hiệu trên máy ảnh DSLR của 2 hãng Canon và Nikon. Mình sẽ cố gắng tập hợp và cập nhật thêm các hãng khác trong phiên bản sau của ứng dụng
+                    </div>
+                </div>
+            </div>
+            
+            <div style="font-style:italic; padding-bottom:50px; padding-top:5px;">
+                Tất cả các hình ảnh và thông tin được tổng hợp từ kinh nghiệm chụp ảnh và sử dụng thiết bị của tác giả biên soạn và trên rất nhiều nguồn trên internet. Website nguồn được ghi trong mục Giới thiệu về ứng dụng.
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>        
+        $(document).ready(function () {
+            $('#accordion').on('shown.bs.collapse', function () {
+                var panel = $(this).find('.in').parent();
+                $('html, body').animate({
+                    scrollTop: (panel.offset().top - 3)
+                }, 0);
+            });
+        });
+        function scrolltotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 0);
+        }
+    </script>
+</body>
+</html>

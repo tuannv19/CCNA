@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var touching = null;
+        $('selector').each(function () {
+            this.addEventListener("touchstart", function (e) {
+                e.preventDefault();
+                touching = window.setTimeout(longTouch, 500, true);
+            }, false);
+            this.addEventListener("touchend", function (e) {
+                e.preventDefault();
+                window.clearTimeout(touching);
+            }, false);
+        });
+
+        function longTouch(e) {
+            // do something!
+        }
+    </script>
+</head>
+<body>
+    <div style="height:3px"></div>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Các thuật ngữ trên máy ảnh KTS</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Trước khi tìm hiểu về những yếu tố kỹ thuật cơ bản của nhiếp ảnh, các bạn nên hiểu một số thuật ngữ sau nằm trên máy ảnh:<br /><br />
+                        <b>Lens: </b> Ống kính.<br />
+                        <b>Focal Length: </b> Tiêu cự.<br />
+                        <b>DOF (Depth of field): </b> Độ sâu trường ảnh.<br />
+                        <b>35mm film equivalent: </b> Tính tương đương với máy ảnh film 35mm.<br />
+                        <b>Digital Zoom: </b> Zoom kỹ thuật số, một công nghệ mới nhưng chất lượng hình ảnh thường rất...xấu.<br />
+                        <b>Focusing Range Normal AF: </b> Khả năng lấy nét tự động ở chế độ bình thường. Bạn sẽ có 2 khoảng lấy nét  là một khoảng cách tối thiểu và vô cực.<br />
+                        <b>Macro AF: </b> chụp ảnh cận cảnh với tiêu cự tự động. Thường sẽ có hai khoảng cách, một dành cho vị trí ống kính góc rộng (thường sẽ chụp được sát hơn) và một cho vị trí ống Tele.<br />
+                        <b>Optical Viewfinder: </b> khuôn ngắm bằng quang học<br />
+                        <b>LCD Monitor: </b> Màn hình tinh thể lỏng để quản lý chụp và xem lại hình ảnh. Khi ở chế độ chụp với màn hình này ta hay gọi là Live View.<br />
+                        <b>LCD Pixels Approx: </b> Độ phân giải của màn hình LCD, càng cao thì chất lượng càng đẹp. Hiện nay thông thường ở mức 1 triệu pixels, kích cỡ màn hình 3 inche.<br />
+                        <b>LCD Coverage: </b> Phần trăm (%) góc "nhìn" trường ảnh thực khi ngắm bằng khuôn ngắm quang học. Thông thường thì từ 95% đến 100% ở các dòng máy DSLR.<br />
+                        <b>APERTURE AND SHUTTER: </b> Khẩu độ ống kính và Tốc độ chụp.<br />
+                        <b>Maximum Aperture: </b> Bạn sẽ có 2 giá trị tối đa của khẩu độ, một cho vị trí ống kính góc rộng (W) và một cho vị trí télé (T) đối với ống kính có 2 khẩu độ.<br />
+                        <b>Shutter Speed: </b> Tốc độ chụp.<br />
+                        <b>Slow shutter: </b> Tốc độ chụp chậm, thời gian phơi sáng lâu.<br />
+                        (Phần này sẽ nói chi tiết trong Mục Kiến thức nhiếp ảnh căn bản).<br />
+                        <b>EXPOSURE CONTROL: </b> Đo sáng<br />
+                        <b>Light Metering Method: </b> Các phương pháp đo sáng: Evaluation (Đo sáng tổng hoà)/ Center-weighted average (Đo sáng trung tâm)/ Spot (Đo sáng điểm)<br />
+                        <b>Exposure Control Method: </b> Các chương trình đo sáng tự động được lập trình sẵn: Program AE (Tự động hoàn toàn), Shutter-Priority AE (ưu tiên Tốc độ chụp), Aperture-Priority AE (ưu tiên khẩu độ ánh sáng), Manual (chụp bằng kỹ thuật cá nhân)<br />
+                        <b>AE Lock: </b> Đây là tính năng giúp bạn ghi nhớ chỉ số đo sáng của một điểm đặc biệt ưu tiên (Nói nôm na là Khóa sáng).<br />
+                        <b>ND Filter: </b> Kính lọc trung tính, có thể được gắn luôn trong 1 số máy sẵn ống kính như máy Compact.<br />
+                        <b>WHITE BALANCE: </b> Cân bằng trắng, đây là giá trị rất quan trọng trong việc cân bằng màu sắc của ảnh.<br />
+                        <b>White Balance Control Auto</b> (Chế độ tự động), Pre-set chương trình đặt sẵn: (Daylight (ánh sáng ban ngày), Cloudy (trời nhiều mây), Tungsten (ánh sáng vàng của đèn dây tóc), Fluorescent (đèn nê-ông), Fluorescent H (đèn nê-ông mầu), or Flash), or Custom (thường đây là các vị trí bạn có thể cá nhân hóa cân bằng trắng theo ý mình, được tính bằng độ K)<br />
+                        <b>FLASH</b><br />
+                        Built-in Flash Operation Modes: Các chế độ hoạt động của đèn gắn sẵn trong máy: Auto, Red-Eye Reduction On/ Off - chống mắt đỏ.<br />
+                        Flash Range: Cự ly hoạt động hiệu quả của đèn sẽ được tính theo ống kính góc rộng (WIDE) và Télé, thường tính theo độ nhạy 100 ISO.<br />
+                        Recycling Time Approx: Thời gian để đèn nạp điện và hoạt động bình thường giữa hai lần chụp.<br />
+                        Terminals for External Flash: Đây là chỗ để gắn thêm đèn Flash bên ngoài.<br />
+                        Automatic E-TTL: Đèn flash hoạt động bằng chế độ đo sáng qua ống kính (TTL = through-the-lens)<br />
+                        Flash Exposure Compensation: Đây là khả năng hiệu chỉnh cường độ sáng của đèn flash, tăng hay giảm tính bằng khẩu độ sáng +/-EV (exposure value)<br />
+                        <b>ISO: </b> Độ nhạy sáng của cảm biến máy ảnh Kỹ thuật số (hay film – nếu là máy film):<br />
+                        Nếu ở máy Kỹ thuật số có thể điều chỉnh được giá trị từ 50 cho đến 25.600 (Cá biệt 1 số máy có thể lên đến hơn 3 triệu).<br />
+                        Nếu ở máy film thì phụ thuộc vào film (Luôn có ghi ở ngoài hộp film, thông thường thì từ 100 đến 800)<br />
+                        <b>SHOOTING SPECIFICATIONS: </b> Các chế độ chụp ảnh đặc biệt có sẵn:<br />
+                        Shooting Modes Auto, Creative P: Tự động hoàn toàn.<br />
+                        Av (Hoặc A): Ưu tiên khẩu độ sáng: Chỉ chỉnh khẩu độ, tốc độ máy tự động điều chỉnh.<br />
+                        Tv (Hoặc T, hoặc S): Ưu tiên tốc độ chụp: Chỉ chỉnh tốc độ, khẩu độ máy tự động điều chỉnh.<br />
+                        M: chỉnh mọi thông số bằng tay theo kỹ thuật cá nhân.<br />
+                        Custom 1, Custom 2: Cá nhân hoá, thiết lập theo sở thích cá nhân của người chụp.<br />
+                        <b>Các chế độ chụp cài đặt sẵn trong máy kỹ thuật số: </b><br />
+                        Portrait: Chụp chân dung.<br />
+                        Landscape: Chụp phong cảnh<br />
+                        Night Scene: Chụp buổi tối.<br />
+                        Macro: Chụp cận cảnh.<br />
+                        Sport: Chụp thể thao.<br />
+                        Panaroma: chụp ảnh quang cảnh rộng với chức năng ghép nhiều hình ảnh để tạo nên một ảnh duy nhất.<br />
+                        Movie: quay phim.<br />
+                        Self-Timer: Chụp ảnh tự động<br />
+                        Wireless Control: Điều khiển không dây từ xa.<br />
+                        Continuous Shooting High Speed:Chụp ảnh liên thanh, thường thì sẽ có thông tin về số lượng hình ảnh có thể chụp được trên 1 giây.<br />
+                        <b>Photo Effects: </b> Hiệu ứng đặc biệt: Được tích hợp trên 1 số máy kỹ thuật số:<br />
+                        Vivid (mầu sắc sống động)<br />
+                        Neutral (màu trung tính)<br />
+                        Low Sharpening (đường nét mềm mại)<br />
+                        Sepia (màu giống như ảnh cũ)<br />
+                        Black & White (đen trắng)<br />
+                        Trên đây là 1 số thuật ngữ riêng dùng trong chụp ảnh, đôi khi phải để tiếng Anh, nếu diễn giải ra tiếng Việt thì rắc rối cực kỳ. Do đó mong các bạn hiểu cho anh em chụp ảnh, khi nói họ có thể xài 1 tá từ ngữ mà đôi khi mới nghe thì không hiểu gì!<br /><br />                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel-group" id="accordion">
+            <div style="padding-top:5px;"></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Những ký hiệu trên nút chọn chế độ chụp</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                    	<b><i>Nếu bạn vừa mua chiếc máy ảnh DSLR đầu tiên của mình, hẳn bạn sẽ lúng túng trong việc hiểu ý nghĩa các nút bấm cũng như cách sử dụng chúng khi chụp ảnh. Dưới đây là những hướng dẫn căn bản.</i></b><br />
+                        <b>Lưu ý:</b> Trong hầu hết các tình huống khi mới tập chụp ảnh, bạn nên sử dụng các thiết lập hoàn toàn tự động để tránh rủi ro cho bức ảnh của bạn. Ngoài ra, do mới lần đầu sử dụng máy ảnh DSLR, bạn hãy cứ chọn chế độ chụp tự động để làm quen với việc cầm máy, giữ vững máy trong lúc chụp bởi máy ảnh DSLR to và nặng hơn máy ảnh compact khá nhiều.<br />
+                        Các hướng dẫn ở đây là dành cho máy ảnh DSLR – dòng máy thay đổi ống kính được, tuy nhiên bạn cũng có thể tham khảo khi sử dụng với máy ảnh compact có ống kính cố định, hoặc máy ảnh không gương lật (Mirrorless - hệ máy nhỏ gọn có thể thay đổi ống kính), vì về cơ bản chúng giống nhau.<br />
+                        Các máy ảnh DSLR thường có một bánh xe điều chỉnh chế độ chụp (mode dial) có dạng xoay tròn hoặc có thể là nút gạt, người dùng xoay hoặc gạt mode dial này để tìm tới từng chức năng tương ứng với các ký hiệu biểu thị chế độ chụp. Việc bố trí các chế độ chụp, số lượng và ký hiệu của chúng có thể thay đổi theo từng model máy, ngay cả khi cùng một hãng máy ảnh.<br />
+                        Ký hiệu chế độ chụp tự động (Auto) được thay đổi nhiều nhất: khi thì là hình chữ nhật màu xanh (hoặc trắng), khi thì là chữ AUTO nổi bật với màu xanh, khi thì bên cạnh chữ AUTO còn có thêm hình chiếc máy ảnh, hoặc có khi chỉ là hình chiếc máy ảnh, hoặc một chữ A được bao quanh bởi khung chữ nhật xanh. Một số máy ảnh còn có thêm chế độ iAuto (Intelligent Auto – tự động thông minh) hoặc Auto+, A+, có thể mang lại cho người dùng những bức ảnh chất lượng cao mà không cần nhiều công sức chỉnh sửa các thông số.<br />
+                        <b>Chú ý:</b> nếu bạn chọn chế độ tự động trên máy ảnh, bạn cần thiết lập ống kính ở chế độ lấy nét tự động nếu ống kính có tùy chọn này. Nếu ống kính DSLR của bạn có tùy chọn cho lấy nét tự động, bạn sẽ thấy ở cạnh bên thân ống kính có chữ AF.<br />
+                        <b>Một số mode dial phổ biến</b><br /><br />
+
+                        <div style="text-align:center;">
+                            <img src="images/cacthuatngutrenmayanhkts/1.jpg" width="100%" /><br />
+                            Mode Dial trên các máy ảnh Canon 50D, 5D Mark II, 600D<br /><br />
+
+                            <img src="images/cacthuatngutrenmayanhkts/2.jpg" width="100%" /><br />
+                            Mode Dial trên các máy ảnh Nikon D5000, D7000, D3100<br /><br />
+
+                            <img src="images/cacthuatngutrenmayanhkts/3.jpg" width="100%" /><br />
+                            Mode Dial trên các máy ảnh Sony A55, A900, A200<br /><br />
+                        </div>
+
+                        <b>Một số ký hiệu thông dụng trên mode dial</b><br />
+                        Như bạn thấy trong các hình chụp mode dial ở trên, số lượng các chế độ chụp được đặt sẵn trên mode dial là khác nhau tùy thuộc các model và thương hiệu máy ảnh. Những người mới lần đầu cầm máy ảnh DSLR có thể e ngại khi thấy có quá nhiều ký hiệu, nhưng thực tế mode dial càng có nhiều ký hiệu càng có nghĩa là bạn có thể truy cập thật nhanh tới những chức năng mong muốn mà không phải mày mò tìm trong Menu, mang lại sự tiện lợi trong sử dụng.<br />
+                        Dưới đây là lý giải ý nghĩa của những ký hiệu thường thấy nhất trên máy ảnh số nói chung. Tùy theo từng model máy mà các ký hiệu này xuất hiện trên mode dial hoặc trong Menu, nên bạn có thể tham khảo khi tìm hiểu các chức năng trong nút Menu của máy.<br />
+                        <img src="images/cacthuatngutrenmayanhkts/4.jpg" width="30px" style="vertical-align: bottom;" /><b>Auto (Tự động):</b> Máy ảnh thiết lập tất cả mọi thứ, bạn chỉ cần đặt ở chế độ này, ngắm và chụp. Được sử dụng cho ảnh chụp nhanh, người dùng không muốn bị làm phiền với các chi tiết hoặc không cần tới các tinh chỉnh để đạt hiệu quả chụp theo ý muốn. Ở hầu hết các model máy ảnh khi được đặt ở chế độ này sẽ có đèn hỗ trợ lấy nét tự động (AF) nếu cần thiết, nghĩa là nếu cảnh chụp đã có đủ ánh sáng thì sẽ không nháy đèn. Máy ảnh cũng tự lựa chọn các điểm lấy nét tự động và thường lấy nét vào chủ thể gần nhất. Ký hiệu này thường có trên các máy ảnh DSLR Nikon, và thay đổi (như đã đề cập ở trên) với các thương hiệu máy ảnh khác: 
+                        <img src="images/cacthuatngutrenmayanhkts/5.jpg" width="30px" style="vertical-align: bottom;" /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/6.jpg" width="30px" style="vertical-align: bottom;" /><b>Program (Chương trình):</b> Chế độ bán tự động với các chương trình lập sẵn, máy chỉ cho phép người dùng điều chỉnh một số ít tính năng hỗ trợ thêm như ánh sáng, đèn flash, khẩu độ, tốc độ màn trập khi điều kiện chụp thực tế đòi hỏi. Bạn có thể kết hợp các thay đổi khẩu độ và tốc độ màn trập mà máy ảnh đã chọn bằng cách quay thêm bánh xe điều chỉnh thông số.<br />
+                        <img src="images/cacthuatngutrenmayanhkts/7.jpg" width="30px" style="vertical-align: bottom;" /><b>Shutter Priority (Ưu tiên điều chỉnh tốc độ chụp):</b> Chế độ này thích hợp để chụp các chủ thể di chuyển với tốc độ cao, cho phép người cầm máy kiểm soát tốc độ chụp (tốc độ màn trập), máy sẽ tính toán thông số khẩu độ của ống kính để đạt được độ sáng cần thiết. Tốc độ cửa trập được tính bằng một phần của giây đồng hồ (ví dụ 1/4000, 30 giây…), tốc độ cửa trập càng chậm thì thời gian phơi sáng của cảm biến trên máy ảnh càng nhiều, dẫn tới ảnh càng sáng. Ký hiệu S này thường được sử dụng trên máy ảnh của Nikon, Minolta, Konica Minolta, Sony, Olympus, Sigma, còn trên máy ảnh Canon, Pentax, Leica thường được ký hiệu là 
+                        <img src="images/cacthuatngutrenmayanhkts/8.jpg" width="" style="vertical-align: bottom;" /> (time value).<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/9.jpg" width="30px" style="vertical-align: bottom;" /><b>Aperture Priority (Ưu tiên điều chỉnh khẩu độ):</b> Đối lập với chế độ ưu tiên màn trập, chế độ này cho phép người dùng kiểm soát khẩu độ (độ mở của ống kính), trong khi máy thiết lập tốc độ màn trập. Khẩu độ mở càng lớn thì luồng ánh sáng lọt qua lỗ điều tiết ánh sáng (aperture) càng nhiều làm ảnh càng sáng. Khẩu độ mở được tính bằng chỉ số F, ví dụ f1.4, f2.8, f8 hay f22; chỉ số này càng nhỏ thì khẩu độ mở càng lớn và ngược lại. Chế độ này thích hợp khi cần làm nổi bật chủ thể; các đối tượng khác cũng như hậu cảnh được làm mờ. Ký hiệu chữ A này xuất hiện trên máy ảnh Nikon, Sony, Olympus… và được ký hiệu là
+                        <img src="images/cacthuatngutrenmayanhkts/10.jpg" width="" style="vertical-align: bottom;" /> trên máy ảnh Canon, Pentax, Leica.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/11.jpg" width="30px" style="vertical-align: bottom;" /><b>Manual (Chỉnh tay hoàn toàn):</b> Người dùng có thể hoàn toàn tùy ý sử dụng tất cả các nút chức năng của máy để thiết lập các thông số như tốc độ chụp, độ mở của ống kính, ánh sáng... để đạt các hiệu ứng chụp mong muốn. Chế độ này thích hợp với những người dùng chuyên nghiệp, biết cách tính toán các thông số để có được bức ảnh với những góc chụp mỹ mãn.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/12.jpg" width="30px" style="vertical-align: bottom;" /><b>Night Portrait (Chân dung ban đêm):</b> Sử dụng tốc độ màn trập chậm với đèn flash, cân bằng giữa hai yếu tố này để ảnh chụp chân dung vào ban đêm trông tự nhiên khi chụp với đèn flash. Có thể sử dụng lấy nét AF đối tượng gần nhất. Nên sử dụng chân máy (tripod) để tránh bị nhòe ảnh khi chụp bị rung tay.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/13.jpg" width="30px" style="vertical-align: bottom;" /><b>Macro (Chụp cận cảnh):</b> Nikon gọi chế độ này là Close up. Ở chế độ này, các màu đỏ và xanh lá được nâng đậm lên, máy ảnh sẽ tự động lựa chọn điểm lấy nét trung tâm, người dùng có thể chọn lấy nét thêm những điểm khác nếu máy ảnh có hỗ trợ tính năng Multi-Selector. Đèn flash sẽ tự động bật lên khi ánh sáng yếu. Nên sử dụng chân máy khi chụp ở chế độ này.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/14.jpg" width="30px" style="vertical-align: bottom;" /><b>Sport (Thể thao):</b> Sử dụng tốc độ màn trập cao hơn, máy ảnh sẽ chuyển sang lấy nét liên tục khi nút chụp được nhấn xuống nửa chừng, theo dõi đối tượng lấy nét ở khu vực lấy nét trung tâm. Nếu chủ thể rời khỏi khu vực trung tâm AF, máy ảnh sẽ dõi theo và đánh giá điểm lấy nét từ các vùng lấy nét khác. Máy ảnh có thể hỗ trợ người dùng chọn vùng lấy nét mong muốn. Cả đèn flash và đèn hỗ trợ lấy nét đều ở trạng thái tắt khi sử dụng chế độ này. Thích hợp để chụp các sự kiện thể thao hoặc chuyển động nhanh.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/15.jpg" width="30px" style="vertical-align: bottom;" /><b>Child (Trẻ em):</b> Chế độ này tăng cường độ sắc nét và độ bão hòa cho quần áo và các chi tiết nền, nhưng làm cho tông màu da mềm mại và trông tự nhiên. Đèn flash sẽ bật lên nếu ánh sáng quá mờ nhạt. Thích hợp để chụp trẻ em<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/16.jpg" width="30px" style="vertical-align: bottom;" /><b>Landscape (Cảnh quan):</b> Tăng độ bão hòa màu sắc, độ tương phản và sắc nét cho bức ảnh phong cảnh thành phố hoặc núi rừng. Máy sẽ sử dụng lấy nét AF điểm gần nhất, đèn flash và đèn hỗ trợ AF được tắt trong chế độ này.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/17.jpg" width="30px" style="vertical-align: bottom;" /><b>Portrait (Chân dung):</b> Điều chỉnh khẩu độ ống kính để làm mềm các chi tiết nền nhằm giúp chủ thể chính nổi bật rõ ràng hơn. Độ sắc nét và độ bão hòa màu sắc được kiểm duyệt một chút, mang lại tông màu da mềm mại và trông tự nhiên hơn. Đèn flash sẽ bật lên nếu ánh sáng quá mờ nhạt.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/18.jpg" width="" style="vertical-align: bottom;" /><b>Scene (Cảnh):</b> còn có ký hiệu là
+                        <img src="images/cacthuatngutrenmayanhkts/19.jpg" width="" style="vertical-align: bottom;" />: Truy cập tới các chế độ mặc cảnh (cảnh định sẵn) trên máy ảnh mà mode dial không đủ chỗ để ghi hết. Khi chọn chế độ này, máy ảnh sẽ hiển thị danh sách các chế độ mặc cảnh mà máy cung cấp lên màn hình để bạn chọn. Một số máy ảnh chỉ cung cấp vài cảnh định sẵn, nhưng cũng có nhiều máy ảnh cao cấp cho bạn tới vài chục cảnh khác nhau. Các cảnh định sẵn thông dụng gồm: Night Landscape (phong cảnh ban đêm), Party/Indoor (chụp tiệc tùng/ trong nhà), Beach/Snow (chụp bãi biển/tuyết), Sunset (chụp hoàng hôn), Dusk/Dawn (chụp bình minh), Pet Portraits (chụp thú cưng), Blossom (chụp hoa), Autumn Colors (chụp phong cảnh mùa thu), Food (chụp thức ăn), Silhouette (chụp ngược sáng, tạo bóng đen trên nền cảnh), High Key (chụp ảnh dư sáng với chỉ một vài chi tiết trong ảnh được nổi lên), Low Key (chụp với nền cảnh màu tối, nổi bật chủ thể)...<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/20.jpg" width="30px" style="vertical-align: bottom;" /><b>Auto Flash Off (tắt đèn flash):</b> Trong chế độ này, phơi sáng tự động nhưng flash bị vô hiệu hóa, và máy ảnh sẽ tự thay đổi các mức ISO tùy thuộc nguồn sáng của khung cảnh xung quanh. Đèn hỗ trợ lấy nét AF sẽ được bật nếu cần thiết, và máy ảnh lựa chọn điểm AF với chủ thể gần nhất. Chế độ này rất tốt khi chụp ảnh trong bảo tàng hoặc những nơi mà đèn flash không được phép, trông sẽ tự nhiên hơn ảnh chụp trong nhà.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/21.jpg" width="30px" style="vertical-align: bottom;" /><b>Scene Intelligent Automatic (chọn khung cảnh thông minh):</b> là chế độ bổ sung/thay thế cho chế độ tự động hoàn toàn (Full Auto), trong đó ngoài việc máy ảnh có thể tự thiết lập các thông số phơi sáng, tốc độ…, còn có thêm chế độ Picture Styles, nghĩa là máy có thể tự động lựa chọn một cách thông minh các chế độ mặc cảnh có sẵn trong máy một cảnh phù hợp nhất với hoàn cảnh chụp xung quanh. Chế độ này khác với chế độ Scene hoặc SCN ở chỗ máy sẽ thay bạn chọn cảnh một cách tự động, chứ không phải bạn tự thiết lập cảnh chụp. Trên máy ảnh Sony, chế độ này được ký hiệu là Intelligent Auto:
+                        <img src="images/cacthuatngutrenmayanhkts/22.jpg" width="30px" style="vertical-align: bottom;" /><br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/23.jpg" width="30px" style="vertical-align: bottom;" /><b>Creative Auto Mode (chế độ sáng tạo tự động):</b> Ký hiệu này thường thấy trên máy ảnh Canon, một chế độ phơi sáng mới, có tác dụng tương đương như chế độ P được mở rộng. Khi thiết lập máy ở chế độ CA, máy ảnh cho phép người dùng điều chỉnh kiểu chụp (picture style), thông số phơi sáng, lựa chọn định dạng file RAW hay JPEG, nhưng phần lớn các tùy chọn khác vẫn là tự động. Màn hình LCD sẽ hiển thị các thông tin/hướng dẫn cho mỗi phần thông số cần điều chỉnh, chẳng hạn như nhắc người dùng xem có muốn làm mờ phông nền không, hoặc có muốn làm cho hình ảnh tối hơn/sáng hơn không…<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/24.jpg" width="30px" style="vertical-align: bottom;" /><b>Bulb (Bóng đèn):</b> chế độ chụp ảnh dưới bóng đèn, có trên máy ảnh Canon. Trong chế độ này, màn trập được giữ ở trạng thái mở chừng nào người dùng còn nhấn nút màn trập. Điều này rất hữu ích khi cần phơi sáng lâu như cảnh đêm, pháo hoa, chụp thiên thạch, bầu trời đêm. Khi đặt chế độ này, màn hình LCD sẽ hiển thị ở phía trên thông số về khoảng thời gian đã trôi qua, trong suốt quá trình phơi sáng. Người dùng nên sử dụng thêm điều khiển từ xa hoặc hẹn giờ khi chụp ở chế độ này.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/25.jpg" width="30px" style="vertical-align: bottom;" />
+                        <img src="images/cacthuatngutrenmayanhkts/26.jpg" width="30px" style="vertical-align: bottom;" />
+                        <img src="images/cacthuatngutrenmayanhkts/27.jpg" width="30px" style="vertical-align: bottom;" /><b>Camera User Settings (chế độ do người dùng cài đặt, còn gọi là Custom):</b> Cho phép bạn ghi lại một số cài đặt cá nhân để truy cập nhanh khi cần, thường thấy trên máy ảnh của Canon. Tùy theo từng model máy mà bạn sẽ chỉ có một, hai, hay cả ba nút này; nếu có một nút thì chỉ ghi là C. Trên máy ảnh của Nikon, bạn có thể thấy các nút tương đương được ký hiệu là U1, U2, U3; một số dòng máy khác có thể chỉ ghi 1, 2, 3. Các nút này rất hữu ích khi bạn chụp một sự kiện với nhiều nguồn ánh sáng khác nhau, chẳng hạn như một đám cưới, các chế độ tùy chỉnh này sẽ cho phép bạn cài đặt máy ảnh cho các điều kiện chụp cụ thể và sau đó dễ dàng chuyển đổi giữa các chế độ một cách nhanh chóng. Bạn có thể lưu hầu hết các tùy chọn chế độ chụp của máy ảnh vào các nút này. Để thực hiện cài đặt thông số cho các nút này, bạn truy cập vào menu Camera User Setting.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/28.jpg" width="30px" style="vertical-align: bottom;" /><b>Playback (Chế độ phát lại):</b> cho phép xem lại các ảnh và video đã chụp, sửa và xóa chúng nếu muốn. Kèm theo chế độ này còn có một tùy chọn Info cho phép người dùng hiển thị các thông tin về bức ảnh đã chụp, gồm chụp ở điều kiện phơi sáng như thế nào, tốc độ, khẩu độ nào…<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/29.jpg" width="30px" style="vertical-align: bottom;" /><b>Automatic Depth of Field AE (chọn Độ sâu trường ảnh tự động):</b> dùng để chụp một nhóm nhiều người, hoặc chụp cảnh vật mà có nhiều chi tiết ở phía tiền cảnh, hoặc các chủ đề mà có nhiều yếu tố cần quan tâm và ở các khoảng cách khác nhau so với máy ảnh. Khi thiết lập chế độ này, máy ảnh sẽ kiểm soát tốc độ màn trập và các giá trị khẩu độ, còn bạn có thể điều chỉnh các thông số khác. Lưu ý là chế độ này không thể sử dụng được nếu ống kính lấy nét đang đặt ở chế độ lấy nét bằng tay (MF-Manual Focus). Máy ảnh sẽ sử dụng hệ thống tự động lấy nét để đo khoảng cách của các đối tượng nằm trong các vùng lấy nét tự động mà máy hỗ trợ, sau đó sẽ thiết lập một khoảng cách lấy nét xác định và khẩu độ ống kính tương ứng để làm cho tất cả các đối tượng đều sắc nét.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/30.jpg" width="30px" style="vertical-align: bottom;" /><b>Movie Recording (Chế độ quay phim):</b> Khi chế độ Movie được chọn, gương lật và màn trập của máy ảnh mở như trong chế độ Live View, và máy thực hiện quay/dừng quay phim khi bạn nhấn nút màn trập. Ở một số máy ảnh mới, nút quay phim không nằm trên mode dial mà được thiết kế thành một nút riêng, thường là một nút tròn với chấm đỏ ở giữa, cho phép người dùng truy cập nhanh tới chức năng quay phim. Lúc này, nhấn nút quay phim thì máy sẽ lập tức quay phim, dừng quay bằng cách nhấn nút quay một lần nữa. Các máy ảnh số cao cấp sẽ cho phép vừa quay phim vừa lấy nét, zoom trong lúc quay, tuy nhiên vẫn có nhiều máy không hỗ trợ khả năng này. Nếu muốn sử dụng chức năng quay phim thường xuyên, bạn nên chọn những máy ảnh có hỗ trợ microphone ngoài để tăng chất lượng âm thanh của video.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/31.jpg" width="30px" style="vertical-align: bottom;" /><b>Sweep Panorama (chụp toàn cảnh):</b> Chế độ cho phép chụp liên tiếp nhiều ảnh khi người dùng nhấn giữ nút chụp và lia máy theo chiều ngang, sau đó các ảnh chụp được sẽ được nối với nhau thành một kiểu ảnh duy nhất và mang lại một bức ảnh toàn cảnh với bề rộng rất lớn mà một bức ảnh thông thường không thể thu hết được. Việc lấy nét cũng như độ phơi sáng được khóa ngay từ khung hình đầu tiên.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/32.jpg" width="30px" style="vertical-align: bottom;" /><b>3D Sweep Panorama (chụp toàn cảnh 3D):</b> Tương tự như chế độ Sweep Panorama, nhưng sau khi chụp một loạt ảnh, các ảnh sẽ được chia ra hai phần để nhìn bằng mắt trái và mắt phải, sau đó kết hợp trong một bức ảnh duy nhất ở định dạng .MPO file và người dùng có thể nhìn thấy độ sâu của ảnh.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/33.jpg" width="30px" style="vertical-align: bottom;" /><b>Anti Motion Blur (Chống mờ):</b> cho phép chụp liên tiếp nhiều ảnh trong một lần nhấn nút chụp, máy sẽ tự điều chỉnh độ nhạy sáng hoặc tốc độ màn trập và chống nhòe mờ cho ảnh. Các ảnh chụp được sẽ được tự động phân tích để chọn ra ảnh có chất lượng tốt nhất.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/34.jpg" width="30px" style="vertical-align: bottom;" /><b>Picture Effect (Hiệu ứng ảnh):</b> Cho phép người dùng lựa chọn các hiệu ứng khác nhau cho ảnh chụp, ví dụ như chụp ảnh đen trắng, ảnh hoài cổ, chụp High Key, Low Key… Bạn sẽ thấy ký hiệu này trên máy ảnh Sony, một số máy ảnh khác như Nikon sử dụng nút Effects:
+                        <img src="images/cacthuatngutrenmayanhkts/35.jpg" width="30px" style="vertical-align: bottom;" />.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/36.jpg" width="30px" style="vertical-align: bottom;" /><b>Motion Snapshot (chụp ảnh chuyển động):</b> có trên một số máy ảnh đời mới của Nikon. Khi người dùng nhấn nút chụp, máy sẽ chụp một bức ảnh tĩnh và quay một đoạn video khoảng một giây bắt đầu trước và kết thúc sau thời gian nút chụp được ấn. Phim được ghi trong chế độ Motion Snapshot được chiếu lại trên máy ảnh trong chế độ phát lại chậm. Với chế độ phát lại chậm khoảng 0.4 x tốc độ bình thường của đoạn phim và hình, Motion Snapshot cho phép người dùng diễn tả những khoảnh khắc ấn tượng cho thấy sự thay đổi chậm rãi trong cách trình bày, cảnh lá rơi từ trên cây, hoặc cảnh thay đổi trong tự nhiên.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/37.jpg" width="30px" style="vertical-align: bottom;" /><b>Smart Photo Selector (lựa chọn ảnh thông minh):</b> có trên một số máy ảnh Nikon, tương tự như chế độ Anti Motion Blur của máy ảnh Sony ở trên hoặc chế độ Smart Auto của một số nhà sản xuất khác. Điều đặc biệt là máy ảnh Nikon sẽ chụp liên tiếp nhiều khung hình khác nhau khi bạn nhấn nhẹ nút chụp, sau đó sẽ chọn ra khoảng 5 ảnh tốt nhất và lưu chúng lại thành một nhóm trên nút xem lại, sau đó bạn sẽ tự tay lựa chọn 1 ảnh đẹp nhất, các ảnh còn lại sẽ bị xóa đi.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/38.jpg" width="30px" style="vertical-align: bottom;" /><b>Still Image (chụp ảnh tĩnh):</b> Nút chụp ảnh tiêu chuẩn, cho phép bạn chọn trong menu những chế độ chụp thích hợp như Scene Auto Selector, Program, Shutter-priority, Aperture-priority, Manual… Như vậy, nếu có nút này thì bạn sẽ không truy cập nhanh được tới các chế độ chụp mà phải qua vài thao tác nữa. Thường các máy ảnh compact sẽ có nút này.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/39.jpg" width="30px" style="vertical-align: bottom;" /><b>Guide:</b> cho phép truy cập tới các tùy chọn Record, Playback và Setup trong máy ảnh Nikon. Người dùng được nhắc nhở lựa chọn chụp ảnh tĩnh hay video, sau đó máy cung cấp các gợi ý về thiết lập thông số. Với mỗi lựa chọn của người dùng, máy ảnh đều cung cấp những thông tin giải thích những hiệu ứng sẽ xảy ra nếu lựa chọn thiết lập đó, kèm theo một ảnh nhỏ minh họa.<br /><br />
+                        <img src="images/cacthuatngutrenmayanhkts/40.jpg" width="30px" style="vertical-align: bottom;" /><b>Continuous Advance Priority AE (chụp liên tiếp):</b> Cho phép chụp liên tiếp ở tốc độ cao nhất là 10 khung hình/giây mà máy hỗ trợ. Khi chọn chế độ này, khẩu độ ống kính được cố định ở độ mở lớn nhất và độ nhạy sáng ISO được chọn tự động.<br /><br />
+                        Tổng hợp này có thể còn thiếu, do đó nếu bạn không hiểu hoặc muốn góp ý thêm các thuật ngữ khác về nhiếp ảnh xin vui lòng Inbox mình trên Facebook tại http://facebook.com/locvt, hoặc email: locyt2001@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            <div style="float:right; font-style:italic; padding-bottom:50px">
+                Tất cả các hình ảnh và thông tin được tổng hợp từ kinh nghiệm chụp ảnh và sử dụng thiết bị của tác giả biên soạn và trên rất nhiều nguồn trên internet. Website nguồn được ghi trong mục Giới thiệu về ứng dụng.
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('#accordion').on('shown.bs.collapse', function () {
+                var panel = $(this).find('.in').parent();
+                $('html, body').animate({
+                    scrollTop: (panel.offset().top - 3)
+                }, 0);
+            });
+        });
+        function scrolltotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 0);
+        }
+    </script>
+</body>
+</html>
+

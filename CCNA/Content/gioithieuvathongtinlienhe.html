@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var touching = null;
+        $('selector').each(function () {
+            this.addEventListener("touchstart", function (e) {
+                e.preventDefault();
+                touching = window.setTimeout(longTouch, 500, true);
+            }, false);
+            this.addEventListener("touchend", function (e) {
+                e.preventDefault();
+                window.clearTimeout(touching);
+            }, false);
+        });
+
+        function longTouch(e) {
+            // do something!
+        }
+    </script>
+</head>
+<body>
+    <div style="height:3px"></div>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Giới thiệu - Thông tin liên hệ</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <b>Cẩm nang nhiếp ảnh cơ bản</b> là một ứng dụng nhỏ được viết với mục đích giúp đỡ những anh em đam mê nhiếp ảnh nhưng chưa có điều kiện đi học hoặc ngồi tìm hiểu và mày mò trong hàng triệu website trên Internet. Trong ứng dụng này mình cố gắng tổng hợp những kiến thức, thủ thuật, kỹ thuật,… có thể gọi là cơ bản nhất cho những anh em nào muốn nhúng chân vào con đường “đau khổ” nhưng “sung sướng” này. Với mong muốn gom kiến thức nhiếp ảnh từ rất nhiều nơi từ thực tiễn kinh nghiệm của nhiều người và trên mạng Internet vào 1 cú chạm trên màn hình Smartphone, mình sẽ cố gắng cập nhật ứng dụng đều đặn để nội dung phong phú hơn, lượng kiến thức được mở rộng hơn trong những phiên bản tiếp theo.<br />
+						Đặc biệt cảm ơn: bạn Lê Khắc Triều Hưng – Boss tại <i>www.giahungtrieu.net</i> đã giúp tôi hoàn thành ứng dụng này.<br />
+						Nguồn tài liệu, ảnh minh họa, nội dung được sử dụng trong ứng dụng được trích xuất đã có chỉnh sửa và có thể giữ nguyên bản từ các website sau:<br />
+						www.br-art.vn<br />
+						www.tinhte.vn<br />
+						www.vuanhiepanh.com<br />
+						www.vnphoto.net<br />
+						www.designs.vn<br />
+						www.chimkudo.com<br />
+						www.vapa.org.vn<br />
+						www.vnreview.vn<br />
+						www.techz.vn<br />
+						www.caoanhtuan.com<br />
+						www.duytom.com<br />
+						www.lavender.edu.vn<br />
+						www.ape.gov.vn<br />
+						Rất cảm ơn những tác giả đã có công viết hoặc biên dịch những bài viết từ khắp nơi trên Internet để đưa vào các website trên.<br />
+						Nếu trong quá trình sử dụng ứng dụng, nếu có thắc mắc cần hỏi, hoặc đóng góp ý kiến về các kiến thức, thủ thuật, kỹ thuật, … trong nhiếp ảnh vui lòng email về: <i>locyt2001@gmail.com</i> hoặc Inbox Facebook: <i>www.facebook.com/locvt</i><br />
+						Mọi đóng góp và ý kiến của anh em sử dụng ứng dụng mình sẽ tổng hợp để cập nhật và cố gắng trả lời những thắc mắc của anh em trong thời gian sớm nhất!<br />
+						Rất mong được sự ủng hộ của anh em!!!<br />
+						Xin cảm ơn!<br />
+						Tác giả: Võ Tấn Lộc.<br />
+                    </div>
+                </div>
+            </div>
+            <div style="float:right; font-style:italic; padding-bottom:70px">
+                
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>        
+        $(document).ready(function () {
+            $('#accordion').on('shown.bs.collapse', function () {
+                var panel = $(this).find('.in').parent();
+                $('html, body').animate({
+                    scrollTop: (panel.offset().top - 3)
+                }, 0);
+            });
+        });
+        function scrolltotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 0);
+        }
+    </script>
+</body>
+</html>
+

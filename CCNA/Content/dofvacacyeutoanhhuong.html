@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var touching = null;
+        $('selector').each(function () {
+            this.addEventListener("touchstart", function (e) {
+                e.preventDefault();
+                touching = window.setTimeout(longTouch, 500, true);
+            }, false);
+            this.addEventListener("touchend", function (e) {
+                e.preventDefault();
+                window.clearTimeout(touching);
+            }, false);
+        });
+
+        function longTouch(e) {
+            // do something!
+        }
+    </script>
+</head>
+<body>
+    <div style="height:3px"></div>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1. Khái niệm về DOF:</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Độ sâu trường ảnh (Depth of Field - DoF) là khoảng nét rõ trong ảnh, những gì rơi vào khoảng này sẽ sắc nét và ngoài khoảng này thì sẽ mờ nhòe dần.<br /><br />
+                        
+                        <img src="images/dofvacacyeutoanhhuong/1.jpg" width="100%" /><br /><br />
+                        
+                        DoF phụ thuộc vào 4 thông số:<br />
+                        - Loại máy: Ở đây nghĩa là cảm biến ảnh của từng loại máy.<br />
+                        - Tiêu cự: Tiêu cự khác nhau thì DOF thay đổi khác nhau.<br />
+                        - Khẩu độ: Khẩu độ thay đổi thì DOF sẽ dày mỏng khác nhau.<br />
+                        - Khoảng cách tới chủ thể: Tính từ Cảm biến ảnh đến đối tượng chụp.<br />
+                        Thường khi chụp chân dung ta muốn DOF mỏng và phong cảnh thì DOF dày.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2. Các yếu tố ảnh hưởng:</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        a. Loại máy: Ở đây nghĩa là Cảm biến của từng loại máy ảnh.<br />
+                        Có bao giờ bạn tự hỏi vì sao khi chụp bằng Smartphone, mặc dù thông số của nhà sản xuất ghi là khẩu độ F1.8 tiêu cự 24mm nhưng chụp ảnh nó cứ nét từ đầu tới đuôi, cho dù chụp cận cảnh cũng ít thấy hiệu ứng xóa phông. Còn ở 1 cái lens tiêu cự 24 trên máy DSLR, khẩu độ F1.8 nhưng cùng 1 khoảng cách chụp như nhau thì con DSLR nó lại xóa phông bét nhè. Cơ bản là do cảm biến của DLSR nó to hơn, độ sâu trường ảnh nó lớn hơn, do đó khoảng nét của ảnh mỏng hơn, nên xóa phông be bét. Còn cảm biến của Smartphone nó nhỏ xíu, do đó khoảng nét của ảnh xa hơn rất nhiều. Cũng vì lí do như vậy mà Smartphone chỉ thích hợp cho việc chụp phong cảnh là chính.<br /><br />
+
+                        <img src="images/dofvacacyeutoanhhuong/2.jpg" width="100%" /><br />
+                        <div style="text-align:center;"><i>(Ảnh so sánh cảm biến của máy ảnh Smartphone và máy DSLR)</i></div><br />
+
+                        b. Tiêu cự: Khi bạn chụp với 1 ống kính với tiêu cự zoom được, ví dụ 24-105/F4. Khi ở khẩu độ F4, nếu bạn chụp ở tiêu cự 24 thì ảnh sẽ nét sâu, còn khi zoom lại gần thì khoảng nét sẽ mỏng hơn và sẽ thấy ảnh có nền sau mẫu sẽ bắt đầu mờ dần. Do đó ở cùng 1 khẩu độ thì tiêu cự càng lớn độ sâu trường ảnh sẽ càng mỏng.<br /><br />
+
+                        <img src="images/dofvacacyeutoanhhuong/3.jpg" width="100%" /><br /><br />
+
+                        Hình trên mô tả về tiêu cự chụp càng nhỏ thì khoảng nét càng lớn (DoF càng dày). Và nếu bạn chú ý thì tiêu cự có ảnh hưởng đến ảnh khi chụp cùng ở 1 khung hình. Từ 16mm đến 200mm nếu ở cùng 1 khung hình thì sẽ có sự thay đổi biến dạng khác nhau về khuôn mặt của mẫu. Cái này được gọi là <b>Hiệu ứng tiêu cự</b> <i>(Mình sẽ update vấn đề này trong những phiên bản sau)</i>.<br /><br />
+
+                        c. Khẩu độ: Khi bạn sử dụng 1 ống kính có khẩu độ ghi là F2.8 thì bạn có thể thay đổi khẩu độ đó từ 2.8 cho đến 22 hoặc hơn tùy thuộc vào nhà sản xuất ống kính đó. Và khi F càng lớn thì độ sâu trường ảnh sẽ càng dày với cùng một tiêu cự.<br /><br />
+                        
+                        <img src="images/dofvacacyeutoanhhuong/4.jpg" width="100%" /><br /><br />
+
+                        d. Khoảng cách từ Máy ảnh (Cảm biến) đến chủ thể: Ví dụ khi bạn chụp 1 người mẫu đứng cách bạn 5 mét với ống kính tiêu cự 50mm và F2.8 thì bạn sẽ thấy ảnh nét đều từ trước đến sau và mờ dần ở nền sau. Nhưng khi bạn đến gần mẫu khoảng 2 mét thì chỉ còn mỗi mình mẫu là nét, còn nền phía sau sẽ bị xóa mờ, nền càng xa thì càng bị xóa mờ càng nhiều.<br /><br />
+
+                        <img src="images/dofvacacyeutoanhhuong/5.jpg" width="100%" /><br /><br />
+
+                        Có thể tóm tắt việc điều chỉnh độ sâu trường ảnh như sau nếu bạn không thể thay đổi máy ảnh (nghĩa là không thể thay đổi cảm biến):<br />
+                        Tăng độ sâu trường ảnh:<br />
+                        - Thu hẹp khẩu độ của bạn (số f-stop lớn hơn)<br />
+                        - Đi xa ra khỏi đối tượng muốn chụp<br />
+                        - Rút ngắn chiều dài tiêu cự<br />
+                        Giảm độ sâu trường ảnh:<br />
+                        - Mở rộng khẩu độ của bạn (số f-stop nhỏ hơn)<br />
+                        - Di chuyển gần hơn đến đối tượng chụp<br />
+                        - Kéo dài tiêu cự của bạn<br /><br />
+                        
+                        <img src="images/dofvacacyeutoanhhuong/6.jpg" width="100%" /><br /><br />
+                        
+                        <b><i>* Lưu ý: Ngoài ra việc mờ hậu cảnh còn phụ thuộc vào khoảng cách giữa chủ thể và hậu cảnh:</i></b><br />
+                        Cũng như khoảng cách giữa máy ảnh và chủ thể, khoảng cách giữa chủ thể và hậu cảnh cũng ảnh hưởng đến mức độ nhòe mờ. Khoảng cách giữa chủ thể và hậu cảnh càng xa thì hình ảnh càng nhòe mờ. Trong hai ảnh minh họa dưới đây, ống kính bên phải được di chuyển thụt lùi tới những vi trí khác nhau để so sánh độ nhòe mờ.<br /><br />
+                        
+                        <img src="images/dofvacacyeutoanhhuong/10.jpg" width="100%" /><br /><br />
+                        
+                        Cả hai ống kính đều được lắp đặt ở cùng khoảng cách tính từ máy ảnh đến chủ thể.Ống kính bên phải được di chuyển lùi lại khoảng 15 cm.Ống kính bên phải được di chuyển lùi lại khoảng 30 cm.<br />
+						Điểm lấy nét được cố định trên ống kính phía bên trái. Bạn có thể thấy hậu cảnh bị nhòe mờ nhiều hơn khi cách xa điểm lấy nét (nơi chủ thể đang đứng) hơn. Trong tình huống bạn có thể di chuyển vật thể ở hậu cảnh, chẳng hạn như khi chụp những vật nhỏ ở trên bàn, bạn có thể điều chỉnh mức độ nhòe mờ theo ý thích bằng cách di chuyển chủ thể chính và vật thể ở hậu cảnh.<br />
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3. Các điểm lưu ý để có được DoF như ý:</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        a. Sử dụng trang web www.dofmaster.com hoặc rất nhiều trang khác có thể giúp ta tính toán online hoặc download các ứng dụng tương tự cho Android, iOS để tính toán DOF.<br />
+                        b. Trừ các ống chân dung rất đắt tiền, đừng tham mở khẩu tối đa hình dễ bị mờ đều (soft) và trong chụp phong cảnh đừng tham đóng khẩu quá chặt (khoảng từ f11 trở lên) dễ bị mờ đều do nhiễu xạ (diffraction).<br />
+                        c. Khi lấy nét phong cảnh, lưu ý khái niệm khoảng nét ngoại tiêu - khoảng nét tới vô cực (hyper focal distance) có nghĩa là ta sẽ lấy nét vào 1 điểm gần chúng ta hơn (sau điểm tiền cảnh cần rõ nét) chứ không phải là lấy nét ở điểm vô cực.<br />
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4. Bokeh là gì ?</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Bokeh (boh-ke) bắt nguồn từ tiếng Nhật có nghĩa là mờ (blur). Hiệu ứng này được tạo ra bởi các khu vực ngoài vùng lấy nét, tức là nằm ngoài vùng DoF. Bokeh thường được dùng để chỉ những hình tròn (hoặc có thể là lục giác, bát giác, hoặc có thể sử dụng các tấm lọc để cho ra các hình thù như trái tim, thú, ngôi sao…) dễ chịu tạo ra bởi hình dạng của ống kính khi mở. Bokeh được tạo ra khi chụp với khẩu độ mở rộng, chẳng hạn như f/2.8, bokeh cũng có thể được tạo ra với khẩu độ nhỏ hơn nếu hậu cảnh đủ xa đối tượng chụp.<br /><br />
+
+                        <img src="images/dofvacacyeutoanhhuong/7.jpg" width="100%" /><br /><br />
+                        
+                        <b>Những yếu tố ảnh hưởng đến bokeh ?</b><br />
+                        - Thiết kế của ống kính: Cái này là yếu tố rõ ràng nhất. Tùy vào các thiết kế khác nhau mà ống kính cho bokeh khác nhau. Thông thường lens trong cùng 1 họ sẽ cho bokeh tương đối giống nhau. VD: thông thường công thức double-gauss sẽ cho bokeh tốt hơn công thức tessar đơn giản. Nhưng điều đó cũng không hẳn đã đúng vì nhiều lens thiết kế theo double-gauss cũng cho hình ảnh tệ.<br />
+						- Số lá thép và cách sẵp xếp trên lens. Về lý thuyết, càng nhiều và xếp càng tròn thì bokeh càng đẹp hơn.<br />
+						<b><i>(Tuy nhiên cũng có 1 số ống kính đặc biệt có Bokeh tròn xoáy hoặc bong bóng)</i></b><br /><br />
+						
+						<img src="images/dofvacacyeutoanhhuong/8.jpg" width="100%" /><br /><br />
+						<img src="images/dofvacacyeutoanhhuong/9.jpg" width="100%" /><br /><br />
+						
+						- Độ mở khẩu độ của ống kính. Cái này rõ ràng nhất. Vì khẩu độ của ống kính ảnh hưởng đến độ lớn của DOF. Vì thế tăng khẩu độ (F nhỏ) lên thì sẽ thấy bokeh rõ ràng hơn. Từ đó với có nguyên tắc chung là: chân dung thì khẩu độ lớn (F nhỏ) để làm chủ thể nổi bật lên trên nền, phong cảnh thì khẩu độ nhỏ (F lớn) để cảnh có độ sâu và nét tốt hơn.<br />
+                    </div>
+                </div>
+            </div>
+            <div style="font-style:italic; padding-bottom:50px">
+                Tất cả các hình ảnh và thông tin được tổng hợp từ kinh nghiệm chụp ảnh và sử dụng thiết bị của tác giả biên soạn và trên rất nhiều nguồn trên internet. Website nguồn được ghi trong mục Giới thiệu về ứng dụng.
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>        
+        $(document).ready(function () {
+            $('#accordion').on('shown.bs.collapse', function () {
+                var panel = $(this).find('.in').parent();
+                $('html, body').animate({
+                    scrollTop: (panel.offset().top - 3)
+                }, 0);
+            });
+        });
+        function scrolltotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 0);
+        }
+    </script>
+</body>
+</html>

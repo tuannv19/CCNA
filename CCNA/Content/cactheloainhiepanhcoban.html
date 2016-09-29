@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var touching = null;
+        $('selector').each(function () {
+            this.addEventListener("touchstart", function (e) {
+                e.preventDefault();
+                touching = window.setTimeout(longTouch, 500, true);
+            }, false);
+            this.addEventListener("touchend", function (e) {
+                e.preventDefault();
+                window.clearTimeout(touching);
+            }, false);
+        });
+
+        function longTouch(e) {
+            // do something!
+        }
+    </script>
+</head>
+<body>
+    <div style="height:3px"></div>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Giới thiệu</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Với nhiếp ảnh, mỗi thể loại đều mang một ý nghĩa, mục đích khác nhau. Do đó việc xác định rõ các thể loại trong nhiếp ảnh là vấn đề rất cần thiết đối với những người quan tâm đến loại hình nghệ thuật này. Trên thế giới có rất nhiều thể loại nhiếp ảnh khác nhau. Trong khuôn khổ ứng dụng nhỏ này, mình chỉ giới thiệu 1 số thể loại rất thông dụng và được sử dụng hằng ngày. Có thể một số người vẫn chụp ảnh nhưng không rõ lắm là mình đang chụp thể loại nào, thông thường thì anh em mới vào nghề chưa định hướng được mình sẽ theo thể loại nào? Mình sẽ chụp cái gì? Chụp như thế nào? Do đó việc xác định một hướng đi theo một thể loại nhất định cho chính mình sẽ giúp bạn tiến bộ rất nhanh trên con đường nghệ thuật đầy chông gai này.<br /><br />
+						<b>Vậy Thể  loại ảnh là gì?</b><br />
+						Thể loại là những hình thức biểu hiện cơ bản của nhiếp ảnh mang tính thẩm mỹ, nhằm nhận thức và phản ánh thực tại khách quan, được xác định bởi đặc điểm của đối tượng, ý đồ và phạm vi phản ánh của tác phẩm, cũng như phương pháp thể hiện.<br />
+						Thể loại chịu sự chi phối bởi sự lao động sáng tạo của tác giả. Các nhà nhiếp ảnh không làm chủ được thể loại thì không thể nào bộc lộ được phong cách sáng tác.<br /><br />
+						
+						<b>Sự cần thiết phải phân chia thể loại</b><br />
+						Nghệ thuật nhiếp ảnh cũng như các bộ môn văn học nghệ thuật khác không một tác phẩm nào nằm ngoài thể loại. Nói cách khác một tác phẩm nhiếp ảnh nào đó không ở thể loại này thì ở thể loại khác. Không có tác phẩm văn học nghệ thuật phi thể loại, bởi nghệ thuật nhiếp ảnh cũng chiu sự chi phối của thể loại.<br /><br />
+						
+						<b>Sự ra đời của thể loại</b><br />
+						Thể loại ra đời là một tất yếu khách quan, là sự đòi hỏi của công chúng yêu nghệ thuật nhiếp ảnh. Thể loại ra đời muộn hơn sự ra đời của nhiếp ảnh. Thể loại phát triển theo sự phát triển của cuộc sống con người và xã hội. Các thể loại nhiếp ảnh ra đời sớm nhất là: <b>Tĩnh vật – Phong cảnh – Chân dung</b>. Ba thể loại này vốn đã có trong hội họa, nhiếp ảnh đã tiếp thu một cách nhanh chóng. Cuối thế kỷ XIX đầu thế kỷ XX cùng với sự phát triển của nghề in và kỹ thuật in bản kẽm ra đời, báo chí ngày càng phát triển, một thể loại ảnh mới ra đời đó là ảnh báo chí.<br /><br />
+						
+						<b>Cơ sở để phân chia thể loại</b><br />
+						Việc phân chia thể loại dựa trên những yếu tố sau:<br />
+						<i>Phân chia theo đặc điểm đối tượng:</i><br />
+						Thí dụ:  Trời, mây, nước, sông núi…là chất liệu của ảnh phong cảnh<br />
+						Một khuôn mặt tươi tắn, yêu đời, một nụ cười rạng rỡ, một giọt nước mắt đau khổ lăn trên gò má, một nỗi buồn da diết hiện lên trên nét mặt … đích thị là ảnh chân dung.<br />
+						Một hoạt động lao động bình thường hàng ngày diễn ra trong cuộc sống, hẳn là ảnh sinh hoạt, đường phố (Street Life)…<br />
+						<i>Ý đồ của tác giả thông qua nội dung của tác phẩm</i><br />
+						Thí dụ: Chụp một ngôi chùa, nhưng tác giả chỉ muốn thể hiện vẻ đẹp của kiến trúc ngôi chùa, nên chỉ đặc tả ngôi chùa hay một chi tiết đẹp đặc trưng của ngôi chùa. Đó là bức ảnh kiến trúc.<br />
+						Cũng  ngôi chùa đó, được tác giả thể hiện trong không gian rộng lớn với cây đa giếng nước sân chùa, trời mây lồng lộng…Bức ảnh đó không còn là ảnh kiến trúc mà là ảnh phong cảnh kiến trúc, hay ảnh di sản văn hóa.<br />
+						<i>Phương pháp thể hiện</i><br />
+						Mỗi thể loại ảnh có một phương pháp thể hiện khác nhau, độc lập và ổn định, không thể đưa phương pháp thể hiện thể loại ảnh này để thể hiện cho thể loại khác.<br />
+						Thí dụ: Đối với ảnh tĩnh vật ta có thể sắp xếp, bố trí, dàn dựng …, ngược lại chụp chân dung không nên can thiệp, bố trí…mà phải “chộp” được khoảnh khắc thể hiện biểu cảm nhất của nhân vật mà mình mong muốn.<br />
+						<i>Ảnh hưởng của thể loại</i><br />
+						Có xác định được thể loại ảnh, người chụp mới phân định được nội dung và phạm vi phản ánh. Trên cơ sở xác định nội dung và phạm vi phản ánh, tác giả mới tìm phương pháp thể hiện nhằm đạt được hiệu quả cao. Thể loại là phương tiện sinh động đa dạng, giàu tính thẩm mỹ để truyền đạt nội dung tư tưởng của tác phẩm đến người xem đạt hiệu quả cao. Thể loại giúp cho người xem phát hiện được cách nhìn, cảm xúc mới mẻ mà bản thân họ chưa hề nghĩ đến.<br />
+						Thể loại còn có tác dụng mở rộng khả năng nhận thức của người xem.<br />
+						Thể loại càng phát triển (nhiều thể loại) chẳng những mở rộng diện phản ánh thực tế khách quan, mà còn nhằm thỏa mãn nhu cầu thông tin thị giác khác nhau của nhiều người, chẳng hạn chụp ảnh dưới nước, chụp ảnh vũ trụ, ảnh ý tưởng ( ảnh thể nghiệm)…<br /><br />
+						<b>Ảnh nghệ thuật là gì?</b><br />
+						<i>Đặc tính cơ bản của ảnh nghệ thuật</i><br />
+						Là loại ảnh có chất lượng nghệ thuật cao, nội dung sâu sắc, có sức lan tỏa lớn và sống mãi với thời gian, do nhà nghệ sỹ sáng tạo ra từ những sự vật bình thường, giản dị trong cuộc sống thường nhật, trở thành hình tượng nghệ thuật có sức cuốn hút người xem.<br />
+						Ảnh nghệ thuật mang đến cho công chúng một cái gì đó lớn hơn,mới hơn, hấp dẫn hơn, cao đẹp hơn bản thân sự vật về nội dung tư tưởng cũng như hình thức thể hiện.<br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">1. Ảnh phong cảnh thiên nhiên</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        - Ghi lại cảnh thiên nhiên mà trong đó (nếu có con người) không chiếm diện tích lớn trong khuôn hình.<br /><br />
+                        
+                        <img src="images/cactheloainhiepanhcoban/1.jpg" width="100%" /><br /><br />
+                        
+                        - Ảnh phong cảnh qua “cái tôi” của tác giả bao giờ cũng mang một ý nghĩa, mục đích nhất định về nội dung.<br />
+						- Một tác phẩm ảnh phong cảnh thành công là thể hiện được bản chất đặc trưng của cảnh đó mà không một nơi nào có.<br />
+						- Thành công của một tác phẩm ảnh phong cảnh, ngoài nội dung tư tưởng, ảnh phải mang được cái “hồn” đất nước. Đó chính là dấu ấn chủ quan, cái riêng của nhà nhiếp ảnh. Về hình thức có bố cục độc đáo, mới lạ, ánh sáng tuyệt vời.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/2.jpg" width="100%" /><br /><br />
+						
+						Các loại ảnh phong cảnh:<br />
+						- Phong cảnh thiên nhiên, đất nước<br />
+						- Phong cảnh thiên nhiên hoang dã<br />
+						- Phong cảnh công nghiệp<br />
+						- Phong cảnh nông nghiệp<br />
+						- Phong cảnh kiến trúc<br />
+						- Phong cảnh du lịch, di sản văn hóa, di sản tự nhiên…<br /><br />
+
+						<img src="images/cactheloainhiepanhcoban/3.jpg" width="100%" /><br /><br />
+						
+						Ảnh phong cảnh, đặc biệt là phong cảnh du lịch, các di sản văn hóa, di sản tự nhiên, thiên nhiên hoang dã… đòi hỏi tính khách quan một cách tuyệt đối, không được thêm bớt, tô vẽ làm sai sự thật vốn có của nó.<br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">2. Ảnh chân dung</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Các hoạt động văn học nghệ thuật nói chung, nhiếp ảnh nói riêng luôn luôn lấy con người làm đối tượng mô tả.<br />
+						Thế nào là ảnh chân dung: theo ngữ nghĩa hai chữ “chân dung”, có thể hiểu:<br />
+						Chân: là chân thật, đúng như thật<br />
+						Dung: là dung nhan diện mạo.<br />
+						Như vậy, chân dung là dung nhan chân thật của một con người, một tập thể người. Nhưng với định nghĩa này chỉ mới thể hiện được dáng vẻ bên ngoài. Ngày nay ảnh chân dung được hiểu một cách đầy đủ:<br />
+						Ảnh chân dung là một tác phẩm giới thiệu về một con người hay một tập thể người với sự nhấn mạnh về nét mặt, hình dáng, qua đó làm cho người xem cảm nhận được tâm trạng của nhân vật.<br />
+						Nói cách khác: Một bức ảnh chân dung mang đến cho người xem một lượng thông tin về một con người, một nhóm người bao gồm diện mạo, tuổi đời, hoàn cảnh sống…và cả cá tính của họ.<br />
+						Như vậy, ảnh chân dung phản ánh được đặc điểm, cá tính, tình cảm, tư tưởng, cảnh ngộ của đối tượng.<br />
+						Chân dung không chỉ là bức ảnh chụp gần, mà ở đó các quá trình biến đổi của đối tượng được ghi nhận qua nét mặt, trở thành những thông tin mang tính hình tượng để biến thành ý thức tư tưởng của tác phẩm.<br />
+						Các loại ảnh chân dung:<br />
+						- Chân dung cận cảnh (khuôn mặt, nửa người, 2/3 người hoặc cả người).<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/4.jpg" width="100%" /><br /><br />
+						
+						- Chân dung beauty (Đây là 1 thể loại chân dung đặc biệt)<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/5.jpg" width="100%" /><br /><br />
+						
+						- Chân dung cổ điển<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/6.jpg" width="100%" /><br /><br />
+						
+						- Chân dung gắn với bối cảnh<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/7.jpg" width="100%" /><br /><br />
+						
+						- Chân dung cá thể<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/8.jpg" width="100%" /><br /><br />
+						
+						- Chân dung tập thể<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/9.jpg" width="100%" /><br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">3. Ảnh kiến trúc</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Mô tả công trình kiến trúc như nhà ở, dinh thự, đình chùa, phố phường… với vẻ đẹp cao sang độc đáo về kiến trúc, do các kiến trúc sư sáng tạo nên.<br />
+						<i>Các loại ảnh kiến trúc:</i><br />
+						Ảnh kiến trúc tả thực: được thể hiện y chang thiết kế của kiến trúc sư. Các đường nét, hình khối không được biến dạng.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/10.jpg" width="100%" /><br /><br />
+						
+						Ảnh kiến trúc khái quát chọn lọc: Được thể hiện theo cảm hứng nghệ thuật, không bị ràng buộc bởi những nguyên tắc: vuông góc, thẳng đứng, song song… để mang đến cho người xem cảm thụ thẩm mỹ kiến trúc.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/11.jpg" width="100%" /><br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">4. Ảnh tĩnh vật</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Định nghĩa: Miêu tả các đồ vật vô tri vô giác gắn bó với cuộc sống con người, được bố trí, sắp đặt, dàn dựng ở trạng thái tĩnh, để giới thiệu với người xem về một nội dung , một ý nghĩa, hay một tư tưởng nào đó.<br /><br />
+                        
+                        <img src="images/cactheloainhiepanhcoban/12.jpg" width="100%" /><br />
+                        
+                        Vì vậy, ảnh tĩnh vật không chỉ dừng lại ở mục đích trang trí nhằm thỏa mãn con mắt thẩm mỹ của người xem mà ảnh tĩnh vật phải mang một ý đồ nghệ  thuật rõ ràng để làm nổi bật nội dung tư tưởng, mang đến cho người xem một cảm nhận nào đó về ý nghĩa nhân văn xã hội, nghĩa là phải thổi “hồn” vào những vật vô tri vô giác đó. Ảnh tĩnh vật là một tác phẩm nghệ thuật thể hiện được tình cảm con người đối với những đồ vật qua sự sắp đặt. Nói khác đi những đồ vật vô tri vô giác được tác giả sắp đặt lại với nhau để tạo nên nội dung tư tưởng mang tính nghệ thuật.<br />
+						Ảnh tĩnh vật đòi hỏi bố cục đẹp, tạo nên hình tượng nghệ thuật và thể hiện rõ chất liệu của đồ vật.<br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">5. Ảnh thể thao</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Phản ánh hoạt động phong phú của các bộ môn thể thao từ các buổi tập luyện đến các cuộc thi đấu so tài.<br /><br />
+                        
+                        <img src="images/cactheloainhiepanhcoban/13.jpg" width="100%" /><br /><br />
+                        
+                        Ảnh thể thao phản ánh những nét đẹp, những thành tích đạt kỷ lục của các vận động viên trong quá trình tập luyện, thi đấu mang tính nghệ thuật cao, thông qua những động tác hấp dẫn ở những “khoảnh khắc cao trào”, những động tác phức tạp, bất bình thường mà vận động viên đã vượt qua một cách hoàn hảo ngoạn mục. Vẻ đẹp thể thao còn thể hiện qua gương mặt rạng rỡ sáng ngời, vóc dáng khỏe mạnh, cân đối của vận động viên. <b>Thông thường bố cục ít được chú ý đến trong ảnh thể thao mà chỉ chú trọng khoảnh khắc</b>.<br />
+                        <b><i>* Lưu ý:</i></b> Trong khi chụp ảnh thể thao tuyệt đối không được dùng Flash.<br /><br />
+                        
+                        <img src="images/cactheloainhiepanhcoban/14.jpg" width="100%" /><br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">6. Ảnh sân khấu</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Phản ánh mọi hoạt động tiêu biểu của các diễn viên trong luyện tập cũng như trong biểu diễn.<br />
+						Sân khấu có yếu tố kịch bản như kịch nói, tuồng, chèo, cải lương… Với loại ảnh này, đòi hỏi nhà nhiếp ảnh khi chụp phải chọn những cảnh tiêu biểu của vở diễn ở những khoảnh khắc cao trào.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/15.jpg" width="100%" /><br /><br />
+						
+						Sân khấu múa như ba lê, múa dân tộc … Ảnh của loại hình sân khấu này phản ánh nét đẹp của diễn viên qua nét mặt, động tác múa của tay chân và cơ thể.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/16.jpg" width="100%" /><br /><br />
+						
+						Sân khấu ca hát: phải thể hiện được tình cảm của ca sỹ ở thời khắc có sức lay động trái tim khán giả.<br />
+						Sân khấu âm nhạc (hòa tấu…) thể hiện cho được mối quan hệ giữa nhạc công và nhạc cụ.<br />
+						Chụp ảnh sân khấu: ánh sáng yếu, nhưng không được phép chụp Flash, dùng Flash chẳng những không thể hiện trung thành mầu sắc của sân khấu, ảnh bị bẹt, thiếu hình khối… mà còn ảnh hưởng đến biểu diễn của diễn viên.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/17.jpg" width="100%" /><br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">7. Ảnh khỏa thân</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <i>(Mục này không có ảnh Minh họa, vì lí do ảnh hưởng các chính sách vi phạm thuần phong mỹ tục của trên Google CH Play)</i><br />
+                        Là một thể loại chân dung đặc biệt, khó chụp. Và không phải bất cứ cô gái nào có khuôn mặt đẹp, vóc dáng cân đối đều có thể tạo nên bức ảnh khỏa thân đẹp. Cơ thể con người là một tổng hòa các hình khối, bề mặt, các đường cong uốn lượn…<br />
+						Ảnh khỏa thân phải thực sự khỏa thân, không nên quá lạm dụng tấm voan mỏng, nhiều khi sẽ làm mất đi nét đẹp của cơ thể.<br />
+						Không nên đặt người mẫu ở tư thế gò bó, để cho người mẫu ở trong tư thế tự nhiên nhất, thoải mái nhất, rạng rỡ nhất.<br />
+						Bối cảnh (phông) trong ảnh khỏa thân không rườm rà, rối rắm, mầu sắc lòe loẹt, khiến cho người xem mất tập trung vào nét đẹp của cơ thể. Vì vậy bối cảnh tốt nhất dùng mầu ghi (xám trung tính).<br />
+						Có thể dùng nguồn sáng nhân tạo (các loại đèn, Flash,…) hoặc ánh sáng tự nhiên để làm nổi bật đường nét và hình khối của cơ thể.<br />
+						Không gian chụp là thế giới riêng của hai người (Nhiếp ảnh gia và người mẫu).<br />
+						Mối quan hệ giữa người chụp và người mẫu là mối quan hệ đồng cảm nghệ thuật trong sáng.<br />
+						Cơ thể con người, kể cả người mẫu hoàn hảo cũng có thể có những khiếm khuyết nào đó, khi chụp cần dìm những khiếm khuyết đó trong bóng tối, đồng thời phát huy tối đa nét đẹp cơ thể về đường và khối.<br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">8. Ảnh ý tưởng (ảnh thể nghiệm hay ảnh ý niệm)</a>
+                    </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Một thể loại mới ra đời vào nửa đầu thế kỷ XX. Khi kỹ thuật số chưa ra đời, ảnh ý tưởng được tiến hành bằng thủ công buồng tối. Công việc khá phức tạp, phải qua nhiều khâu. Ngày nay nhờ phần mềm photoshop, việc tạo nên một tác phẩm ảnh ý tưởng dễ dàng hơn nhiều, vừa nhanh, đẹp, chính xác. Điều quan trọng là nghĩ ra được ý tưởng, ý tưởng càng sâu nội dung càng tốt.<br />
+						Ảnh ý tưởng mang một nội dung tư tưởng rõ ràng (trong đó hoặc thể hiện tính phê phán, tính đấu tranh, hay một sự ngợi ca…)<br />
+						Ảnh ý tưởng là một thứ vũ khí sắc bén trong cuộc đấu tranh giai cấp, đấu tranh thiên nhiên bảo vệ môi trường… đang diễn ra quyết liệt trên phạm vi toàn thế giới. Nó vừa làm nhiệm vụ tố cáo thói hư tật xấu, những tiêu cực trong xã hội (như tham ô, lãng phí, làm ô nhiễm môi trường…).<br />
+						Về hình thức nó giống tranh cổ động, nhưng mỗi chi tiết trong ảnh là có thực trong đời sống xã hội và thiên nhiên.<br />
+						Về nội dung: rõ ràng sâu sắc<br />
+						Về hình thức có thể áp dụng mọi thủ pháp kỹ thuật để đạt ý tưởng , bao gồm ghép ảnh, lồng chữ, kết hợp với hội họa (phần ảnh không thể thể hiện được). Trong ảnh ý tưởng không phụ thuộc vào các quy luật của ảnh như quy luật phối cảnh, luật gần xa…<br />
+						Ảnh ý tưởng là một thể loại nhằm nới rộng cảm xúc của các tác giả qua việc áp dụng các biện pháp kỹ thuật mà trong ảnh truyền thống không cho phép.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/18.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Dưới nước. Ảnh ý niệm của Jenna Martin</i></div><br />
+						
+						<img src="images/cactheloainhiepanhcoban/19.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Cấp cứu. Ảnh ý niệm của  Bill Wadman</i></div><br />
+						
+						<img src="images/cactheloainhiepanhcoban/20.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Chuyến phiêu lưu của Jane. Ảnh ý niệm của Wilson Kellie</i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">9. Thể loại ảnh silhouette</a>
+                    </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                    	<img src="images/cactheloainhiepanhcoban/21.jpg" width="100%" /><br /><br />
+                    	
+                        Silhouette là một thuật ngữ được dùng trong nhiếp ảnh để chỉ các bức ảnh được chụp ngược sáng, trong đó chủ thể được chụp thường có màu xám hoặc tối (do ngược sáng) còn nền của bức ảnh thì sáng hơn chủ thể rất nhiều.<br />
+						Silhouette là một thuật ngữ thú vị bởi nó là một trong số ít các thuật ngữ có nguồn gốc xuất phát từ tên người. Quay trở lại những năm 1750s, Etienne de Silhouette là bộ trưởng tài chính dưới thời vua Louis XV. Thời kỳ này là thời kỳ mà cuộc chiến 7 năm giữa các phe phái tại châu Âu (trong đó có Pháp) và lan ra cả châu Á và châu Mỹ. Xin được bỏ qua chi tiết về cuộc chiến trên trong bài viết này mà chỉ tập trung vào việc cuộc chiến 7 năm đã tiêu tốn của Pháp rất nhiều tiền. Là bộ trưởng bộ tài chính, Silhouette không còn cách nào khác để kiếm tiền ngoài việc tăng thuế của dân chúng, đặc biệt là thuế dành cho người giàu. Ở đây có hai giả thuyết dẫn tới việc cái tên của ngài bộ trưởng tài chính lại trở thành thuật ngữ được sử dụng trong hội họa, nhiếp ảnh, quay phim … như sau:<br />
+						Xuất phát từ thói quen cắt hình chân dung trên giấy của Etienne de Silhouette. Thói quen này được xuất phát khi những người biểu tình chống lại quy định tăng thuế đã mặc áo giấy, màu đen nhằm tỏ rõ thái độ về việc họ quá nghèo để có thể mua quần áo tử tế mặc. Bắt nguồn từ đây, từ Silhouette được dùng để chỉ các bức hình chân dung màu đen được cắt ra từ giấy. Tuy nhiên, không có bằng chứng thực tế nào còn lại cho tới bây giờ về thói quen của ngài bộ trưởng.<br />
+						Tương tự như trên, thuật ngữ này được sử dụng cho các bức hình chân dung màu đen được cắt ra từ giấy, ám chỉ rằng đây là cách rẻ nhất để ghi lại chân dung của một người (chỉ dùng kéo cắt giấy đen để lấy phác họa chứ không vẽ thêm bất cứ thứ gì). Điều này cũng ám chỉ rằng bởi chính sách thuế gắt gao của ngài bộ trưởng nên dân chúng chỉ còn đủ tiền để sử dụng những thứ rẻ tiền mà thôi.<br />
+						Trong thế kỷ XVIII, kỹ thuật cắt giấy kiểu này đã trở nên cực kỳ phát triển. Nổi bật trong thời kỳ này là chân dung của tiểu thuyết gia Jane Austen hay chân dung của Beethoven thời trẻ.<br />
+						Khi nhiếp ảnh ra đời, kỹ thuật Silhouette ngay lập tức cũng được áp dụng vào trong nhiếp ảnh và là một trong các kỹ thuật phổ biến để diễn tả cảm xúc của người chụp ảnh. Hầu hết các nhiếp ảnh gia và những người yêu thích nhiếp ảnh đều thử nghiệm với kỹ thuật Silhouette. Kỹ thuật này cũng được sử dụng trong điện ảnh sau này. Silhouette không khó để thực hiện nhưng không dễ để áp dụng.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/22.jpg" width="100%" /><br />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">10. Thể loại Nhiếp Ảnh Tối Giản</a>
+                    </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Nhiếp ảnh tối giản (Minimalist Photography) là một trong những loại hình “nghệ thuật tối giản của thị giác”, lấy sự giản lược chi tiết, màu sắc, hình dạng, đường nét… làm sức hút của bức ảnh.<br /><br />
+                        
+                        <img src="images/cactheloainhiepanhcoban/23.jpg" width="100%" /><br /><br />
+                        
+                        Nhiếp ảnh tối giản giản lược tối đa các chi tiết trong ảnh, thể hiện bởi sự tự do hoàn toàn của trí tưởng tượng. Ảnh tối giản có thể giúp người xem tìm một “khoảng lặng”, sự bình yên hay chút cô đơn trong cuộc sống sôi động.<br />
+						<b>Nhiếp ảnh tối giản là gì?</b><br />
+						Nhiếp ảnh tối giản xoay quanh khẩu hiệu “ít hơn là nhiều hơn” (Less is more) và một ví dụ dễ tưởng tượng cho thể loại này là: không có chi tiết nào ngoài một sọc sơn màu trền mảnh vải trắng.<br />
+						Ảnh tối giản trông có vẻ đơn điệu, bao gồm một, hai chủ thể chính nổi bật trên phông nền chi tiết giản đơn. Nhưng chứa đựng những thông điệp hết sức cô đọng và sâu lắng. Gợi mở cảm xúc hay sự cô đơn trong chính tâm hồn mỗi người xem. Chủ đề chính của ảnh tối giản có thể là ảnh tĩnh hay ảnh động, người hay vật, màu sắc hay đơn sắc, những vật dụng thường ngày hay những chi tiết trên cơ thể con người…<br />
+						
+						<img src="images/cactheloainhiepanhcoban/24.jpg" width="100%" /><br /><br />
+						
+						Nhưng không dễ để truyền đạt thông tin vào những bức ảnh ít chi tiết, bởi sự đơn giản luôn khó thể hiện nhất. Do đó, để chụp những bức ảnh tối giản cần sự tư duy và chí tưởng tượng của người chụp nhiều hơn việc nắm bắt khoảnh khắc. Qua bài viết này, hy vọng bạn sẽ tìm được cảm ứng và “khoảng lặng” trong cuộc sống sôi động đầy bon chen… và để nhận thấy “đôi khi dù chỉ nhìn thấy một chút nhưng ngẫm lại rất nhiều điều”.<br />
+						Tìm kiếm chủ đề<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/25.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Mọi sự vật hiện tượng đều có thể trở thành chủ đề của ảnh tối giản</i></div><br />
+						
+						Như đã nói ở trên, bất cứ yếu tố nào cũng có thể khai thác làm chủ đề trong ảnh tối giản. Nhưng đừng phụ thuộc vào điều này và thay tìm kiếm trong căn phòng của mình bạn hãy ra ngoài để tìm những chất liệu mới. Luôn xác định tìm kiếm với cách chụp đơn giản, tối thiểu về hình dạng, đường nét, màu sắc, không gian trống trải, nhìn lên, nhìn xuống và đi bộ chậm. Các đồ vật trên đường có thể dễ dàng đưa vào ảnh tối giản như biển báo, ghế đá, bức tường, chiếc lá… Bạn cũng có thể khai thác các chủ đề sau:<br /><br />
+						<i>Các đường nét</i><br />
+						Đây có thể là những đường thẳng, đường chéo lắp đi lặp lại cùng tông màu, có thể thấy trên các con đường hay những logo, mang lại cảm giác gai góc, mạnh mẽ cho bức ảnh. Khai thác hình ảnh theo cách này rất dễ cho ảnh đẹp.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/26.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Ảnh tối giản theo đường nét</i></div><br />
+						
+						<i>Số và chữ</i><br />
+						Những con số và chữ cái đứng riêng khi được chụp một cách độc đáo theo nhiếp ảnh tối giản có thể mang một nội dung nào đó. Như việc cân nhắc đến ý nghĩa cuộc sống hay sự cô đơn…<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/27.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Khai thác các con số trong ảnh tối giản</i></div><br />
+						
+						<i>Màu sắc</i><br />
+						Trong ảnh tối giản không thể thiếu những bức ảnh có màu sắc và độ tương phản giữa các màu. Sự kết hợp này không loại trừ một chủ thể trong một mảng màu mà có thể kết hợp trong 2 tông màu đối lập. Hơn nữa, biểu cảm của người hay trạng thái của vật thể cũng quyết định thành công của bức ảnh.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/28.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Sự kết hợp của những màu sắc đối lập</i></div><br />
+						
+						<i>Ảnh cùng tông trắng</i><br />
+						Những bức ảnh tối giản có chủ thể và phần nền cùng một tông trắng, chỉ nổi nhẹ các chi tiết và đường nét lại rất cuốn hút mắt nhìn. Nếu bạn lên kết hoạch chụp những bức ảnh ý tưởng này cần chú ý bóng đổ của hình ảnh, không để bóng quá đen.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/29.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Ảnh cùng tông đơn điệu mà sâu sắc</i></div><br />
+						
+						<i>Những bức tường, trần nhà Texture</i><br />
+						Cung cấp cho bức ảnh cảm giác mạnh hơn, với kết cấu pha trộn phức tạp mà giản đơn để mang thông điệp cho bức ảnh.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/30.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Cảm hứng với Texture</i></div><br />
+						
+						<i>Nguyên tắc một phần ba</i><br />
+						Đây cũng là nguyên tắc chung trong luật bố cục. Về cơ bản, nguyên tắc này tạo cho bức ảnh cân bằng rõ rằng hơn khi phân chia không gian (phần ngang hay dọc chia ba). Chủ thể luôn được đặt vào tâm đường giao điểm để nổi bật và hút mắt. Đây là nguyên tắc bố cục được sử dụng nhiều nhất trong nhiếp ảnh tối giản vì tạo hiệu quả cho phần nền đơn giản chiếm không gian lớn. Qua đó, thông tin cần đưa tới người xem hiệu quả hơn.<br /><br />
+						
+						<img src="images/cactheloainhiepanhcoban/31.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Nguyên tắc 1/3 sử dụng nhiều trong ảnh tối giản</i></div><br />
+						
+						<b>Một số kinh nghiệm khi chụp ảnh tối giản</b><br />
+						1. Đơn giản không phải là thuộc tính vật lý, đó là một khái niệm rõ ràng cần suy nghĩ trước khi bấm máy.<br />
+						2. Khi chụp ảnh ngoại cảnh, đừng mọng đợi bạn sẽ chụp được gì mà hãy chụp những gì bạn đã chuẩn bị.<br />
+						3. Luôn mang theo những thiết bị đơn giản. Khi suy nghĩ việc sử dụng thiết bị, có thể nghĩ thêm về hình ảnh.<br />
+						4. Khi chọn một chủ đề cụ thể hãy khám phá bằng nhiều cách và góc độ qua chiếc máy ảnh.<br />
+						5. Chụp cận và loại trừ những chi tiết dư thừa trong khuôn hình tối giản.<br />
+						6. Chọn chủ đề có “tiếng nói” về nội dung để bức ảnh thuyết phục hơn.<br />
+						7. Đặt chủ thể trong những “điểm vàng” và sử dụng tối đa không gian trống.<br />
+						8. Không cần xử lý quá kỹ lưỡng ở phần hậu kỳ vì mỗi bức ảnh này đã là một ảnh đơn giản.<br />
+						9. Bạn luôn có thể tìm thất sự đơn giản ngay trong những khung cảnh hỗn loạn nhất.<br />
+						10. Hãy sáng tạo và đột phá cùng nhiếp ảnh tối giản.<br />
+
+						<img src="images/cactheloainhiepanhcoban/32.jpg" width="100%" /><br />
+						<div style="text-align:center;"><i>Không cần xử lý ảnh tối giản quá kỹ lưỡng ở phần hậu kỳ</i></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">11. Thế loại ảnh HDR</a>
+                    </h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        HDR là viết tắt của cụm từ High Dynamic Range. Trong nhiếp ảnh thì Dynamic Range chỉ dải tương phản động nên ta có thể hiểu từ HDR là dải tương phản động mở rộng. Và ý nghĩa của nó là máy ảnh có trang bị HDR có thể chụp được bối cảnh tương phản lớn mà vẫn giữ được chi tiết.<br /><br />
+                        
+                        <img src="images/cactheloainhiepanhcoban/33.jpg" width="100%" /><br /><br />
+                        
+                        HDR là một loại hình nhiếp ảnh mà bất cứ ai cũng có thể thực hiện. Nó không đòi hỏi có thiết bị cụ thể (trừ phần mềm chỉnh sửa ảnh) và đó là lý do tại sao loại hình này trở nên rất hấp dẫn dành cho các nhiếp ảnh gia chuyên nghiệp và nghiệp dư.<br />
+                        Một số máy ảnh và smartphone có sẵn chế độ  xây dựng trong HDR chế độ điều chỉnh tỷ lệ tương phản và tạo ra các cảnh không thực tế. Đó là cách nhanh nhất và dễ nhất để tạo ra một hình ảnh HDR. Phần lớn các nhiếp ảnh gia thích để có 3 bức ảnh với tốc độ màn trập khác nhau (1 bức dư sáng, 1 bức đúng sáng, và 1 bức thiếu sáng) và sau đó kết hợp chúng bằng cách sử dụng một phần mềm chỉnh sửa ảnh. Có  rất nhiều phần hướng dẫn về HDR hướng dẫn trên mạng, vì thế mọi người có thể tìm thấy một cái gì đó theo ý thích của mình.<br /><br />
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div style="float:right; font-style:italic; padding-bottom:50px">
+                <br />Updating…!!!<br /><br />
+                Tất cả các hình ảnh và thông tin được tổng hợp từ kinh nghiệm chụp ảnh và sử dụng thiết bị của tác giả biên soạn và trên rất nhiều nguồn trên internet. Website nguồn được ghi trong mục Giới thiệu về ứng dụng.<br />
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>        
+        $(document).ready(function () {
+            $('#accordion').on('shown.bs.collapse', function () {
+                var panel = $(this).find('.in').parent();
+                $('html, body').animate({
+                    scrollTop: (panel.offset().top - 3)
+                }, 0);
+            });
+        });
+        function scrolltotop() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 0);
+        }
+    </script>
+</body>
+</html>
+
